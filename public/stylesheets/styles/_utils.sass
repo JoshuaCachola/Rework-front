@@ -1,0 +1,17 @@
+@mixin star()
+    &:before
+        content: "\2B50"
+        padding-bottom: 5px
+
+@mixin fontStyle()
+    color: $blue
+    font-family: $mainFont
+    
+@mixin fontStyleError()
+    font-family: $mainFont
+    font-weight: bold
+    color: #c73535cc
+    font-size: 14px
+    font-style: italic
+    text-align: center
+    

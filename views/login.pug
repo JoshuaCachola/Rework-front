@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png")
+        link(rel="manifest" href="/images/favicon/site.webmanifest")
+        link(rel="api" href=`${api}`)
+        style
+            include ../public/stylesheets/loginStyles/styles/style.css
+        title AirCnC - Log In
+    body
+
+        div(class="hidden formContainer")
+            form(class="login-form")
+                input(type="hidden" name="_csrf" value:csrfToken)
+                span(class="exitButton") x
+                //- label Demo Account
+                div.errors-container
+                label(class="formHeader")
+                input(type="text" name="username" class="userName" placeholder="username")
+                label
+                input(type="password" name="password" class="password" placeholder="password")
+                button(type="submit" class="formLoginButton") Log In
+                button( class="demoUser") Log in as a Demo Guest
+                button( class="demoHost") Log in as a Demo Host
+                //- button(type="submit" class="cancel") Cancel
+    script(type="module" src="/scripts/login.js")

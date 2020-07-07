@@ -1,0 +1,313 @@
+body {
+  margin: 0 auto;
+}
+
+.navBar {
+  color: #ffffff;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  background-color: #004873;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.navImage {
+  padding: 5px 0px 0px 0px;
+}
+
+.profile, .listings, .logoutButton {
+  text-align: center;
+  font-size: 19px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 50px;
+  padding: 5px 16px;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  font-weight: 400;
+}
+
+.profile:hover, .listings:hover, .logoutButton:hover {
+  color: #8BD9D9;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.kitchenDetails__row-1 {
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.kitchenDetails__row-1__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 20px;
+  margin-left: 80px;
+}
+
+.kitchenDetails__detail-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.kitchenDetails__info__featured-img img {
+  width: 500px;
+  height: 350px;
+  border-radius: 20px;
+}
+
+.kitchenDetails__info-logo-text {
+  font-family: cursive;
+  font-size: 40px;
+}
+
+.kitchenDetails__info__description {
+  color: #004873;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+.kitchenDetails__info__star-rating:before {
+  content: "\2B50";
+  padding-bottom: 5px;
+}
+
+.kitchenDetails__row-2__images {
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  max-width: 100%;
+}
+
+.kitchenDetails__kitchen-img img {
+  width: 250px;
+  height: 200px;
+}
+
+.kitchenDetails__row-4 {
+  background-color: #ffffff;
+}
+
+.kitchenDetails__row-4__features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.kitchenDetails__row-5__reviews {
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.kitchenDetails__feature-img img {
+  width: 175px;
+  height: 150px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  background-color: #f6f6f6;
+}
+
+.kitchenDetails__info__name,
+.kitchenDetails__info__star-rating,
+.kitchenDetails__info__rate,
+.kitchenDetails__info__description {
+  color: #004873;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  outline: none;
+  text-align: center;
+}
+
+.kitchenDetails__info_button-bookings {
+  text-align: center;
+  font-size: 19px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #004873;
+  text-decoration: none;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 50px;
+  padding: 5px 16px;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid #004873;
+  border-radius: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.kitchenDetails__info__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.kitchenDetails__row-header {
+  text-align: start;
+  font-weight: bold;
+  font-size: 24px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
+#features-header {
+  padding-top: 15px;
+  font-weight: bold;
+  color: #004873;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+}
+
+.kitchenDetails__feature {
+  text-align: center;
+  font-size: 18px;
+  padding-top: 10px;
+  color: #004873;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+}
+
+.kitchenDetails__row-3.card {
+  background-color: #ffffff;
+  height: 200px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.kitchenDetails__row-3__description-text {
+  color: #004873;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  font-style: italic;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.kitchenDetails__row-3__host-text {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  color: #004873;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+}
+
+.kitchenDetails__review-name {
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.kitchenDetails__review-comment {
+  font-style: italic;
+  font-size: 14px;
+  padding-bottom: 10px;
+  padding-left: 45px;
+  border-bottom: 1px solid #ececec;
+}
+
+.kitchenDetails__row-5 {
+  background-color: #f6f6f6;
+}
+
+.errors-container {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  color: #c73535cc;
+}
+
+.kitchenDetails__review-comment, .kitchenDetails__review-name {
+  color: #004873;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  background-color: #ffffff;
+}
+
+.kitchenDetails__row-header {
+  background-color: #ffffff;
+}
+
+.kitchenDetails__review-name {
+  color: #004873;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+}
+
+.kitchenDetails__row-3 {
+  background-color: #004873;
+}
+/*# sourceMappingURL=style.css.map */

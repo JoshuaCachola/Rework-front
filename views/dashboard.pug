@@ -1,0 +1,53 @@
+include includes/utils.pug
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png")
+        link(rel="manifest" href="/images/favicon/site.webmanifest")
+        link(rel="api" href=`${api}`)
+        style
+            include ../public/stylesheets/DashboardStyles/styles/style.css
+        title AirCnC - Dashboard
+    body
+        include includes/host-navbar.pug
+        h1
+        div.dashboard-top
+            div.welcome-text
+        div.dashboard-middle
+            div.host-kitchens
+                div.kitchens-container-label Kitchens
+                div.kitchens-container
+            div.host-bookings
+                div.bookings-container-label Bookings
+                div.bookings-container
+                    div.pastBookings
+                    div.currentBookings
+        div.dashboard-bottom
+            div.errors-container
+            div.guest-review
+                div.guest-review-label Review a Guest
+                form(class="guest-review-form")
+                    div.review-selector-container
+                        label(for="reviewSelector") Booking
+                        select(id="reviewSelector" class="kitchen-review-form__reviewSelector" name="reviewSelector" required)
+                    div.start-rating-container
+                        label(for="starRating") Star Rating
+                        select(id="starRating" class="guest-review-form__starRating" name="starRating" required)
+                            option(value=1) 1
+                            option(value=2) 2
+                            option(value=3) 3
+                            option(value=4) 4
+                            option(value=5) 5
+                    div.wouldHostAgain-container
+                        +createInput("checkbox", "wouldHostAgain", "guest-review-form__wouldHostAgain", "wouldHostAgain", "Would Host Again?", false, false)
+                    div.comment-container
+                        +createInput("text", "comment", "guest-review-form__comment", "comment", "Comments", true, true)
+                    div.submit-button-container
+                        button(type="submit") Submit
+
+    script(type="module" src="/scripts/dashboard.js")

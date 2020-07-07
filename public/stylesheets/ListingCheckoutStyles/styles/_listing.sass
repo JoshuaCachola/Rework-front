@@ -1,0 +1,285 @@
+.navBar
+	color: $white
+	font-family: $mainFont
+	font-weight: 300
+	background-color: $blue
+	display: flex
+	justify-content: space-between
+	flex-direction: row
+
+.navImage
+	padding: 5px 0px 0px 0px
+
+.listingsButton, .logoutButton, .profile
+	@include buttonStyle()
+	@include buttonShadow()
+
+//this styles the map
+.bookings-form__imgs img
+	// margin-top: 50px
+	// width: 350px
+	// height: 350px
+	// border-radius: 25px
+
+
+.bookings-form__left
+	display: flex
+	flex-direction: column
+	padding: 20px
+	width: 70%
+
+.bookings-form__left-top
+	display: flex
+	justify-content: center
+
+
+.bookings-form__left-top__kitchen-location-container
+	display: flex
+	flex-direction: column
+
+.bookings-form__left-top__kitchen-name
+	@include fontStyle()
+	font-size: 28px
+
+.bookings-form__left-top-container
+	background-color: $white
+	display: flex
+	flex-direction: row
+	justify-content: flex-c
+	height: 130px
+	width: 600px
+	border: 1px solid $blue
+	border-radius: 15px
+
+.bookings-form__left-top__kitchen-location
+	font-size: 20px
+	@include fontStyle()
+
+.bookings-form__left-top__kitchen-feature-img img
+	width: 170px
+	height: 120px
+	padding: 10px
+
+.bookings-form__left-top__kitchen-star-rating
+	@include fontStyle()
+	@include star()
+	padding-left: 40px
+	padding-bottom: 20px
+
+
+
+
+
+
+
+.bookings-form__left-bottom
+	display: flex
+	justify-content: space-around
+	padding-top: 50px
+	margin-right: 40px
+
+.bookings-form__left-bottom__features
+	display: flex
+	flex-direction: column
+	height: 580px
+
+.bookings-form__left-bottom__features-header
+	@include fontStyle()
+	font-weight: bold
+	font-size: 30px
+	display: flex
+	justify-content: center
+	// padding: 20px
+
+.bookings-form__left-bottom__features-body
+	align-content: center
+	// width: 120%
+	// height: 80%
+
+.bookings-form__left-bottom__features-image
+	display: flex
+	justify-content: space-between
+	height: 40%
+	padding: 5px 10px 0px 10px
+
+
+.bookings-form__left-bottom__features-image img
+	width: 75px
+	height: 75px
+	object-fit: fit
+
+.bookings-form__left-bottom__calendar
+	@include fontStyle()
+	display: flex
+
+th, td,
+	background-color: $blue
+	font-size: 16px
+	@include buttonStyle()
+	@include fontStyle()
+	@include buttonShadow
+
+#monthAndYear
+	padding: 10px
+
+
+.card
+	border: 1px solid $blue
+	// padding-top: 20px
+	outline: none
+
+.bookings-form__calendar-pn
+	display: flex
+	justify-content: space-around
+	color: $blue
+	@include fontStyle()
+
+#previous, #next, #confirmTime
+	// background-color: $blue
+	// font-size: 16px
+	@include buttonStyleBlue()
+	// @include fontStyle()
+	// @include buttonShadow
+
+
+//this is what was changing the size when a date was clicked
+.bookings__start-end-time-container
+	display: flex
+	flex-direction: row
+
+.form-inline
+	display: flex
+	flex-direction: column
+
+#month, #year, #startTime, #endTime
+	color: $blue
+
+.start-time, .end-time
+	width: 50%
+	padding: 5px 0px 0px 0px
+
+.jump-to
+	display: flex
+	width: 100%
+	justify-content: space-between
+
+.booking-details__set-time
+	// display: flex
+	width: 100%
+
+.start-time, .end-time
+	display: flex
+
+
+.bookings-form__left-bottom__features-name
+	@include fontStyle()
+	font-size: 20px
+	// padding: 10px
+	font-weight: bold
+	padding-top: 40px
+	// border-top: 1px solid $blue
+
+
+
+
+
+
+
+.calendar-button-class
+	@include buttonStyle()
+
+.hidden
+	position: absolute
+	display: none
+
+form
+	display: flex
+	align-content: center
+	flex-direction: column
+	justify-content: center
+	// position: relative
+	text-align: center
+	// height: 50vh
+	// width: 30vw
+	// margin: 30px 15px
+	border-radius: 15px
+	// min-height: 400px
+
+.bookings-form
+	display: flex
+	width: 100vw
+	justify-content: space-around
+
+
+
+
+
+.bookings-form__right-top
+	display: flex
+	justify-content: flex-end
+	padding: 20px 15px
+
+#bookings-form-check-availability
+	@include buttonStyleBlue()
+	@include buttonShadow()
+
+#bookings-form__right-bottom-submit, #month, #year, #startTime, #endTime
+	// background-color: $blue
+	// font-size: 16px
+	// @include buttonStyle()
+	// @include fontStyle()
+	// @include buttonShadow
+	// text-decoration: underline $blue
+
+
+
+
+
+
+
+// .form-control
+// 	background-color: $blue
+// 	font-size: 16px
+// 	@include buttonStyle()
+// 	@include fontStyle()
+// 	@include buttonShadow
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bookings-form__right-bottom-checkout-total
+	@include fontStyleBold()
+	padding: 20px
+
+.bookings-form__right-bottom-checkout-total-container > div
+	// border-bottom: 1px solid #f6f6f6
+
+.bookings-form__right-bottom-checkout-due-now
+	display: flex
+	flex-direction: space-between
+
+// .bookings-form__right-bottom-checkout-total-container > div
+// 	padding: 20px
+
+.checkout_text
+	// @include fontStyle()
+	// font-weight: bold
+	// font-size: 16px
+
+
+
+span
+	font-weight: bold
+
+
+.errors-container
+	@include fontStyleError()

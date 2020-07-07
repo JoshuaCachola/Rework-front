@@ -1,0 +1,6 @@
+mixin createInput(inputType, inputId, inputClass, inputName, inputLabel, isRequired, isMultilined, inputAC)
+  label(for=inputId)= `${inputLabel} `
+  if isMultilined
+    textarea(type=inputType id=inputId class=inputClass name=inputName required=isRequired autocomplete=inputAC)
+  else
+    input(type=inputType id=inputId class=inputClass name=inputName required=isRequired autocomplete=inputAC)

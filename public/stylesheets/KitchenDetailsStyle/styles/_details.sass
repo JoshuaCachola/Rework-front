@@ -1,0 +1,217 @@
+body
+    margin: 0 auto
+
+.navBar
+    @include fontStyleWhite()
+    background-color: $blue
+    display: flex
+    justify-content: space-between
+    flex-direction: row
+
+.navImage
+    padding: 5px 0px 0px 0px
+
+.profile, .listings, .logoutButton
+    @include buttonStyle()
+    @include buttonShadow()
+
+.kitchenDetails__row-1
+    background-color: #f6f6f6
+    display: flex
+    flex-direction: column
+    // flex-direction: row
+    // justify-content: space-evenly
+
+.kitchenDetails__row-1__info
+    display: flex
+    flex-direction: row
+    flex: 1
+    justify-content: space-around
+    // align-items: center
+    // align-content: center
+    // margin-top: 80px
+    margin-bottom: 20px
+    margin-left: 80px
+
+.kitchenDetails__detail-container
+    display: flex
+    flex-direction: column
+
+
+.kitchenDetails__info__featured-img img
+    width: 500px
+    height: 350px
+    border-radius: 20px
+// .kitchenDetails__row-1__featured-img img
+//     margin-top: 20px
+//     margin-bottom: 20px
+//     width: 400px
+//     height: 300px
+//     object-fit: fill
+//     // padding-right: 25px
+
+.kitchenDetails__info-logo-text
+    font-family: cursive
+    font-size: 40px
+
+.kitchenDetails__info__description
+    @include fontStyle()
+    text-align: center
+
+// .kitchenDetails__info__button
+//     padding-left: 25px
+
+.kitchenDetails__info__star-rating
+    @include star()
+
+.kitchenDetails__row-2__images
+    background-color: #f6f6f6
+    display: flex
+    flex-direction: row
+    justify-content: space-evenly
+    max-width: 100%
+    // max-width: 1300px
+    // max-height: 720px
+    // overflow: auto
+
+
+.kitchenDetails__kitchen-img img
+    width: 250px
+    height: 200px
+
+.kitchenDetails__row-4
+    background-color: #ffffff
+
+.kitchenDetails__row-4__features
+    display: flex
+    flex-direction: row
+    justify-content: space-evenly
+
+.kitchenDetails__row-5__reviews
+    background-color: #f6f6f6
+    display: flex
+    flex-direction: column
+    // justify-content: space-evenly
+
+.kitchenDetails__feature-img img
+    width: 175px
+    height: 150px
+    object-fit: fill
+    background-color: #f6f6f6
+
+.kitchenDetails__info__name,
+.kitchenDetails__info__star-rating,
+.kitchenDetails__info__rate,
+.kitchenDetails__info__description
+    @include fontStyle()
+    font-size: 30px
+    // margin: 8px 25px 8px
+    // padding-left: 40px
+    // font-size: 20px
+    outline: none
+    text-align: center
+    // width: 40%
+
+.kitchenDetails__info_button-bookings
+    @include buttonStyleBlue()
+    border: 1px solid $blue
+    border-radius: 20px
+    font-size: 15px
+    // margin: 8px 25px 8px
+    text-align: center
+
+.kitchenDetails__info__button
+    display: flex
+    justify-content: center
+    // width: 53%
+
+.kitchenDetails__row-header
+    text-align: start
+    font-weight: bold
+    font-size: 24px
+    padding-bottom: 10px
+    padding-left: 40px
+
+#features-header
+    padding-top: 15px
+    font-weight: bold
+    @include fontStyle()
+
+
+.kitchenDetails__feature
+    text-align: center
+    font-size: 18px
+    padding-top: 10px
+    @include fontStyle()
+
+.kitchenDetails__row-3.card
+    background-color: $white
+    height: 200px
+    justify-content: center
+
+.kitchenDetails__row-3__description-text
+    @include fontStyle()
+    font-size: 24px
+    font-style: italic
+    text-align: center
+    justify-content: center
+    // padding-top: 50px
+
+.kitchenDetails__row-3__host-text
+    justify-content: start
+    padding-left: 20px
+    padding-bottom: 10px
+    font-weight: bold
+    @include fontStyle()
+
+.kitchenDetails__review-name
+    font-weight: bold
+    font-size: 16px
+    padding-left: 20px
+    padding-bottom: 10px
+    padding-top: 10px
+
+.kitchenDetails__review-comment
+    font-style: italic
+    font-size: 14px
+    padding-bottom: 10px
+    padding-left: 45px
+    border-bottom: 1px solid #ececec
+
+.kitchenDetails__row-5
+    background-color: #f6f6f6
+
+
+
+.errors-container
+    @include fontStyleError()
+// .bookings-form
+//     display: flex
+//     flex-direction: row
+
+// .booking-form__left
+//     // display: flex
+//     // flex-direction: column
+//     justify-content: space-evenly
+
+// .booking-form__right
+//     // display: flex
+//     // flex-direction: column
+//     justify-content: space-evenly
+
+// .bookings-form__imgs
+//     height: 250px
+//     width: 250px
+
+.kitchenDetails__review-comment, .kitchenDetails__review-name
+    @include fontStyle()
+    background-color: $white
+
+.kitchenDetails__row-header
+    background-color: $white
+
+.kitchenDetails__review-name
+    @include fontStyle()
+
+.kitchenDetails__row-3
+    background-color: $blue

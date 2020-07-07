@@ -1,0 +1,101 @@
+.formContainer {
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  min-height: 400px;
+}
+
+.hidden {
+  position: absolute;
+  display: none;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  text-align: center;
+  height: 50vh;
+  width: 30vw;
+  background-color: rgba(243, 237, 219, 0.678);
+  margin: 30px 15px;
+  border-radius: 15px;
+  min-height: 400px;
+}
+
+.demoUser, .demoHost {
+  height: 40px;
+  width: 180px;
+  border: 1px solid #8BD9D9;
+  border-radius: 21px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  background-color: #0FBFAE;
+  color: #ffffff;
+  outline: none;
+  width: 50%;
+  margin: 15px auto;
+}
+
+.formLoginButton {
+  background-color: #0FBFAE;
+  border: 1px solid #0FBFAE;
+  border-radius: 21px;
+  font-family: mainFont;
+  font-size: 25px;
+  color: #ffffff;
+  height: 50px;
+  opacity: 0.7;
+  width: 80%;
+  margin: 15px auto;
+  font-weight: 400;
+  outline: none;
+}
+
+.password {
+  border: 2px solid #0FBFAE;
+  border-radius: 21px;
+  height: 40px;
+  outline: none;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(245, 240, 223, 0.3);
+  width: 80%;
+  margin: 15px auto;
+}
+
+.userName {
+  height: 40px;
+  border: 2px solid #0FBFAE;
+  border-radius: 21px;
+  outline: none;
+  outline: none;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(245, 240, 223, 0.3);
+  width: 80%;
+  margin: 15px auto;
+}
+
+.exitButton {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #0FBFAE;
+}
+/*# sourceMappingURL=style.css.map */

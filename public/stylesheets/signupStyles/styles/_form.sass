@@ -1,0 +1,67 @@
+body
+    margin: 0 auto
+
+.nav
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    background-color: $blue
+
+.navImage
+    padding: 5px 0px 0px 0px
+
+.home, .help, .signupButton, .loginButton
+    @include buttonStyle()
+    &:hover
+        color: $lightMain
+        font-size: 20px
+        font-weight: bold
+
+.sign-up
+    display: flex
+    // flex-direction: column
+    justify-content: center
+    align-items: center
+    // margin-top: 80px
+    // margin: 100px
+    width: 100vw
+    height: 90vh
+    .sign-up-form
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        padding: 10px
+        width: 40%
+        // height: 40%
+        @include fontStyle()
+        border: 2px solid $blue
+        border-radius: 15px
+        font-size: 20px
+    .signupButton
+        @include buttonStyle()
+        background-color: $blue
+        border-radius: 15px
+        width: 49%
+        height: 35%
+.signup-form__username-container, .signup-form__first-name-container, .signup-form__last-name-container, .signup-form__email-container, .signup-form__roles-container, .signup-form__password-container, .signup-form__confirm-password-container
+    // padding: 10px
+    display: flex
+    justify-content: space-between
+    width: 60%
+    align-items: center
+    &:not(:last-child)
+        margin-bottom: 10px
+
+.sign-up-form__username, .sign-up-form__firstName, .sign-up-form__lastName, .sign-up-form__email, .sign-up-form__roleId, .sign-up-form__password, .sign-up-form__confirmPassword
+    @include fontStyle()
+    border: 1px solid $blue
+    border-radius: 15px
+    outline: none
+    font-size: 15px
+    padding: 3px 10px 3px 10px
+
+.errors-container
+    // color: red
+    // font-weight: bold
+    @include fontStyleError()

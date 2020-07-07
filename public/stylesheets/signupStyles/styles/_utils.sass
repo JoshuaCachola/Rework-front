@@ -1,0 +1,63 @@
+@mixin star()
+    &:before
+        content: "\2B50"
+        padding-bottom: 5px
+
+@mixin fontStyle()
+    color: $blue
+    font-family: $mainFont
+    font-weight: 300
+    
+@mixin fontStyleWhite()
+    color: $white
+    font-family: $mainFont
+    font-weight: 300
+
+@mixin fontStyleError()
+    font-family: $mainFont
+    font-weight: bold
+    color: #c73535cc
+    font-size: 14px
+    font-style: italic
+    text-align: center
+
+@mixin buttonStyle()
+    text-align: center
+    font-size: 19px
+    font-family: $mainFont
+    color: $white
+    text-decoration: none
+    height: 100%
+    box-sizing: border-box
+    height: 50px
+    padding: 5px 16px
+    -webkit-appearance: none
+    background: none
+    border: none
+    outline: none
+    font-weight: 400
+
+@mixin buttonStyleBlue()
+    text-align: center
+    font-size: 19px
+    font-family: $mainFont
+    color: $blue
+    text-decoration: none
+    height: 100%
+    box-sizing: border-box
+    height: 50px
+    padding: 5px 16px
+    -webkit-appearance: none
+    background: none
+    border: none
+    outline: none
+    font-weight: 400
+
+@mixin buttonShadow()
+    &:hover
+        border-radius: 30px
+        border: 1.25px solid $blue
+
+    
+
+    

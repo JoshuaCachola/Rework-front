@@ -1,0 +1,87 @@
+.kitchenListing
+    display: flex
+    width: 100%
+    border-bottom: 1px solid $blue
+    padding: 10px
+    height: 200px
+
+.kitchenListing__img
+    flex: 2
+    object-fit: cover
+
+.kitchenListing__img > img
+    height: 100%
+    width: 100%
+    border-radius: 5px
+
+.kitchenListing__userInfo
+    @include fontStyle()
+    text-align: left
+    font-size: 20px
+    flex: 2
+    font-weight: 500
+
+.kitchenListing__location
+    @include fontStyle()
+    font-size: 13
+    opacity: 0.7
+
+.kitchenListing__features
+    @include fontStyle()
+    text-align: center
+    font-size: 15px
+    text-align: justified
+    width: 80%
+    opacity: .8
+    letter-spacing: 1px
+    padding: 10px
+    font-weight: bold
+
+.kitchenListing__starRating
+    @include fontStyle()
+    font-size: 15px
+    flex: 1
+    display: flex
+    justify-content: flex-end
+    align-items: baseline
+    @include star()
+
+.listing-info-container
+    flex: 3
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    padding-left: 10px
+
+.kitchenListing__rate
+    display: flex
+    @include fontStyle()
+    flex-direction: row-reverse
+    font-size: 15px
+    font-weight: bold
+
+.kitchenListing__wouldRentAgain
+    @include fontStyle()
+    @include star()
+    display: flex
+    justify-content: flex-start
+    font-size: 13px
+
+.kitchenListing__topLine
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    @include fontStyle()
+
+.kitchenListing__bottomLine
+    display: flex
+    justify-content: space-between
+    padding-top: 20px
+
+.kitchenListing__userInfo-link
+    text-decoration: none
+    // @include fontStyle()
+    color: $blue
+
+.errors-container
+    @include fontStyleError()

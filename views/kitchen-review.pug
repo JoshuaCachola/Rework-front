@@ -1,0 +1,37 @@
+include includes/utils.pug
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png")
+    link(rel="manifest" href="/images/favicon/site.webmanifest")
+    title Guest Review
+  body
+    .kitchen-review
+      div.errors-container
+      form(class="kitchen-review-form")
+        label(for="starRating") Star Rating
+        select(id="starRating" class="kitchen-review-form__starRating" name="starRating" required)
+          option(value=1) 1
+          option(value=2) 2
+          option(value=3) 3
+          option(value=4) 4
+          option(value=5) 5
+        label(for="cleanRating") Cleanliness Rating
+        select(id="cleanRating" class="kitchen-review-form__cleanRating" name="cleanRating" required)
+          option(value=1) 1
+          option(value=2) 2
+          option(value=3) 3
+          option(value=4) 4
+          option(value=5) 5
+        +createInput("checkbox", "featureBool", "kitchen-review-form__featureBool", "featureBool", "As Described", false, false)
+        +createInput("checkbox", "wouldRentAgain", "kitchen-review-form__wouldRentAgain", "wouldRentAgain", "Would Rent Again", false, false)
+        +createInput("text", "comment", "comment", "kitchen-review-form__comment", "comment", "Comments", false, true)
+        button(type="submit") Submit
+    script
+      include ../public/scripts/utils.js
+    script(src="/scripts/kitchen-review.js")

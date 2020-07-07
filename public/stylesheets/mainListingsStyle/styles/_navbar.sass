@@ -1,0 +1,66 @@
+
+body
+    background-color: $white
+
+    // display: flex
+
+.navListings
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background: none
+    border: none
+    outline: none
+
+// .searchBox
+//     &::placeholder
+//         color: $white
+
+
+
+.searchBar
+    display: flex
+    justify-content: flex-start
+    background: none
+    border: none
+    outline: none
+    // width: 25%
+    border: 1.25px solid $white
+    border-radius: 5px
+    height: 30px
+    margin-top: 10px auto
+    font-size: 20px
+    margin-left: 20px
+    color: $white
+    padding: 5px
+    &::placeholder
+        color: $white
+        opacity: .6
+
+form
+    width: 30vw
+    display: flex
+    justify-content: flex-start
+    padding-top: 10px
+.logo
+    padding-left: 5px
+    margin-bottom: 5px
+
+
+.profile, .listingsButton, .logoutButton
+    &:hover
+    @include buttonShadow()
+    @include buttonStyle()
+    color: $white
+
+
+
+
+.navListings
+    display: flex
+    width: 100%
+    justify-content: space-between
+    position: fixed
+    background-color: $blue
+    z-index: 100
+    border-bottom: 1px solid #3b3b3bcc

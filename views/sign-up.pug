@@ -1,0 +1,45 @@
+include includes/utils.pug
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png")
+    link(rel="manifest" href="/images/favicon/site.webmanifest")
+    link(rel="api" href=`${api}`)
+    style
+          include ../public/stylesheets/signupStyles/styles/style.css
+    title AirCnC - Sign Up
+  body
+    .nav
+      .navImage
+        img(class="logo" src="/images/logo/aircnc-navbar-white.png")
+      .navButtons
+        button(class="home") Home
+        button(class="help") Help
+    .sign-up
+
+      form(class="sign-up-form")
+        div.errors-container
+        .signup-form__username-container
+          +createInput("input", "username", "sign-up-form__username", "userName", "Username", true, false, "username")
+        .signup-form__first-name-container
+          +createInput("input", "firstName", "sign-up-form__firstName","firstName", "First Name", true, false)
+        .signup-form__last-name-container
+          +createInput("input", "lastName", "sign-up-form__lastName", "lastName", "Last Name", true, false)
+        .signup-form__email-container
+          +createInput("email", "userEmail", "sign-up-form__email", "email", "Email", true, false, "username")
+        .signup-form__roles-container
+          label(for="roles") Roles
+          select(id="roles" class="sign-up-form__roleId" name="roleId")
+            option(value=1) Host
+            option(value=2) Renter
+        .signup-form__password-container
+          +createInput("password", "password", "sign-up-form__password", "password", "Password", true, false, "new-password")
+        .signup-form__confirm-password-container
+          +createInput("password", "confirmPassword", "sign-up-form__confirmPassword", "confirmPassword", "Confirm Password", true, false, "new-password")
+        button(type="submit" class="signupButton") Sign Up
+    script(type="module" src="scripts/signup.js")

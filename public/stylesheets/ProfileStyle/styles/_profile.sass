@@ -1,0 +1,133 @@
+body
+    margin: 0 auto
+
+h1
+    display: flex
+    justify-content: center
+    font-size: 50px
+    @include fontStyle()
+
+
+.listingsButton, .logoutButton, .profile
+    @include buttonStyle()
+
+.past-booking-image-container, .current-booking-image-container
+    width: 200px
+    height: 150px
+    overflow: hidden
+    padding: 0px 10px 0px 0px
+
+.past-booking-image, .current-booking-image
+    width: 200px
+
+.navListings
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    background-color: $blue
+
+.navImage
+    padding: 5px 0px 0px 0px
+
+.bookings
+    display: flex
+    flex-direction: column
+    justify-content: center
+    @include fontStyle()
+    padding: 10px
+
+.bookings-bottom-half
+    display: flex
+    justify-content: center
+
+.bookings-top-half
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    padding-bottom: 20px
+
+.current-booking-header, .past-booking-header
+    display: flex
+    justify-content: center
+    font-size: 25px
+    font-weight: bold
+    // border-bottom: 1px solid
+
+.past-booking-container, .current-booking-container
+    display: flex
+    padding: 10px 10px
+    // border-bottom: 1px solid
+    // border-left: 1px solid
+    // border-right: 1px solid
+    border: 1px solid $blue
+    border-radius: 15px
+    margin-bottom: 2px
+    font-size: 20px
+    @include fontStyle()
+
+// .past-booking__header:last-child
+//     color: $white
+
+.past-booking-confirmation, .past-booking-kitchen-name, .past-booking-kitchen-address, .past-booking-date
+    padding: 0px 0px 10px 0px
+
+.current-booking-confirmation, .current-booking-kitchen-name, .current-booking-kitchen-address, .current-booking-date,
+    padding: 0px 0px 10px 0px
+
+
+.kitchen-review
+    display: flex
+    flex-direction: column
+    justify-content: center
+    border: 1px solid $blue
+    border-radius: 25px
+    width: 50%
+
+.kitchen-review-label
+    display: flex
+    justify-content: center
+    font-size: 50px
+    @include fontStyle()
+
+// .kitchen-review-form
+//     display: flex
+//     flex-direction: column
+//     justify-content: center
+//     width: 50%
+
+.review-selector-container, .star-and-clean-container, .feature-and-would-container, .comment-container, .submit-button-container
+    display: flex
+    justify-content: center
+
+// .star-and-clean-container
+//     display: flex
+//     justify-content: center
+
+.start-rating-container
+    padding-right: 67px
+
+.feature-bool-container
+    padding-right: 90px
+
+.comment
+    width: 275px
+    height: 60px
+
+.errors-container
+    @include fontStyleError()
+
+
+
+button
+    @include buttonStyleBlue()
+    @include buttonShadow()
+
+.current-booking-detail
+    display: flex
+    flex-direction: column
+
+.cancel-booking-button
+    justify-content: flex-end
+
+.current-booking-container
+    // height: 150px

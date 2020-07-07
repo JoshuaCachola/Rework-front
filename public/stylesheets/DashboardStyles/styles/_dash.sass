@@ -1,0 +1,190 @@
+body
+   margin: 0 auto
+
+.navListings
+    background-color: $blue
+    display: flex
+    justify-content: space-between
+
+.navImage
+    padding: 5px 0px 0px 0px
+
+.kitchen-container
+    display: flex
+    align-items: center
+    width: 100%
+    border-bottom: 1px solid $blue
+    padding: 10px
+    height: 100%
+
+
+.dashboard, .CreateListing, .logoutButton
+    @include buttonStyle()
+    @include buttonShadow()
+
+.kitchen-image-container
+    flex: 2
+    object-fit: cover
+    // display: flex
+    // justify-content: flex-start
+    // width: 20%
+
+
+
+.kitchen-image-container > img
+    height: 100%
+    width: 55%
+    border-radius: 5px
+    display: flex
+    justify-content: center
+
+.welcome-text
+    display: flex
+    justify-content: center
+    @include fontStyle()
+    font-size: 30px
+    font-weight: bold
+
+.kitchens-container-label
+    display: flex
+    justify-content: center
+    @include fontStyle()
+    font-size: 25px
+    text-decoration: underline
+
+.kitchen-detail-container
+    @include fontStyle()
+    height: 50%
+    width: 60%
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: flex-start
+    & *:not(:last-child)
+        margin-bottom: 10px
+
+.kitchen-detail
+    // display: flex
+    // flex-direction: column
+
+.bookings-container-label
+    font-size: 30px
+    text-align: center
+    @include fontStyle
+
+
+.bookings-container
+    display: flex
+    width: 100%
+    flex-direction: column
+
+.pastBookings
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    // border-top: 1px $blue
+    padding: 5px 0px
+
+.past-booking-header
+    display: flex
+    // padding: 5px 0 5px 0
+    border-top: 1px solid $blue
+    width: 100%
+    justify-content: center
+
+.current-booking-header
+    display: flex
+    // padding: 5px 0 5px 0
+    border-top: 1px solid $blue
+    width: 100%
+    justify-content: center
+
+.past-bookings
+    width: 80%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+
+.past-booking-detail
+    border: 2px solid $blue
+    border-radius: 15px
+    padding: 10px
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: flex-start
+    margin: 20px
+    @include fontStyle()
+
+h3, .current-booking-header
+    @include fontStyle()
+    font-weight: bold
+
+.currentBookings
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+
+.current-bookings
+    width: 80%
+    display: flex
+    flex-wrap: wrap
+    .current-booking-detail
+        border: 2px solid $blue
+        border-radius: 15px
+        padding: 10px
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: flex-start
+        margin: 20px
+        @include fontStyle()
+
+.cancel-booking-button
+    @include buttonStyleBlue()
+    @include buttonShadow()
+
+.past-booking-confirmation
+    color: $darkMain
+    font-weight: bold
+
+.error-container
+    @include fontStyleError
+
+.guest-review-form
+    display: flex
+    height: 150%
+    flex-direction: column
+    align-items: center
+    align-content: space-around
+    border: 1px solid $blue
+    @include fontStyle()
+    width: 100%
+
+
+.guest-review-label
+    @include fontStyle()
+    display: flex
+    justify-content: center
+    font-size: 20px
+    font-weight: bold
+
+.guest-review
+    display: flex
+    height: 200%
+    width: 50%
+    flex-direction: column
+
+.dashboard-bottom
+    display: flex
+    justify-content: center
+    border-top: 1px solid $blue
+
+.guest-review-label
+    padding: 5px 0px
+
+button
+    @include buttonStyleBlue()
+    @include buttonShadow()

@@ -1,0 +1,238 @@
+body {
+  margin: 0 auto;
+}
+
+h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 50px;
+  color: #004873;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+}
+
+.listingsButton, .logoutButton, .profile {
+  text-align: center;
+  font-size: 19px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 50px;
+  padding: 5px 16px;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  font-weight: 400;
+}
+
+.past-booking-image-container, .current-booking-image-container {
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+  padding: 0px 10px 0px 0px;
+}
+
+.past-booking-image, .current-booking-image {
+  width: 200px;
+}
+
+.navListings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #004873;
+}
+
+.navImage {
+  padding: 5px 0px 0px 0px;
+}
+
+.bookings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #004873;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  padding: 10px;
+}
+
+.bookings-bottom-half {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bookings-top-half {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+.current-booking-header, .past-booking-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.past-booking-container, .current-booking-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 10px;
+  border: 1px solid #004873;
+  border-radius: 15px;
+  margin-bottom: 2px;
+  font-size: 20px;
+  color: #004873;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+}
+
+.past-booking-confirmation, .past-booking-kitchen-name, .past-booking-kitchen-address, .past-booking-date {
+  padding: 0px 0px 10px 0px;
+}
+
+.current-booking-confirmation, .current-booking-kitchen-name, .current-booking-kitchen-address, .current-booking-date {
+  padding: 0px 0px 10px 0px;
+}
+
+.kitchen-review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #004873;
+  border-radius: 25px;
+  width: 50%;
+}
+
+.kitchen-review-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 50px;
+  color: #004873;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+}
+
+.review-selector-container, .star-and-clean-container, .feature-and-would-container, .comment-container, .submit-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.start-rating-container {
+  padding-right: 67px;
+}
+
+.feature-bool-container {
+  padding-right: 90px;
+}
+
+.comment {
+  width: 275px;
+  height: 60px;
+}
+
+.errors-container {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  color: #c73535cc;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+}
+
+button {
+  text-align: center;
+  font-size: 19px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #004873;
+  text-decoration: none;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 50px;
+  padding: 5px 16px;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  font-weight: 400;
+}
+
+button:hover {
+  border-radius: 30px;
+  border: 1.25px solid #004873;
+  color: #8BD9D9;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.current-booking-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cancel-booking-button {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+/*# sourceMappingURL=style.css.map */
