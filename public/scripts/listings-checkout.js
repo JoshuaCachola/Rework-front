@@ -159,7 +159,7 @@ const kitchenDetails = async () => {
 
   rate = kitchen.rate;
   console.log(rate);
-  let imgHTML = `<img src="http://maps.googleapis.com/maps/api/staticmap?center=${kitchen.lat},${kitchen.lng}&markers=color:red%7Clabel:SS%7C${kitchen.lat},${kitchen.lng}&zoom=17&size=375x350&key=AIzaSyC0YJylly9ZmkoIGcZLPO5xVNZMyuyo78c">`;
+  let imgHTML = `<img src="http://maps.googleapis.com/maps/api/staticmap?center=${kitchen.lat},${kitchen.lng}&markers=color:red%7Clabel:SS%7C${kitchen.lat},${kitchen.lng}&zoom=17&size=375x350&key=AIzaSyDscju6O6knNTt9zh71EQkt7Lk1XeejhyQ">`;
   // kitchen.imgPath.forEach((img, i) => {
   //   imgHTML += `<img id="bookings-form__img-${i + 1}" src="${img}">`;
   // });
