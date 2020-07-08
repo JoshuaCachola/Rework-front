@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const roleId = localStorage.getItem("AIRCNC_CURRENT_USER_ROLE");
     // console.log(starRating);
     document.querySelector(".kitchenDetails__row-1__info").innerHTML = `
-      <div class="kitchenDetails__detail-container">
+      <div class="demo-card-event mdl-card mdl-shadow--2dp">
         <div class="kitchenDetails__info__name">
           ${kitchen.name}
         </div>
@@ -70,16 +70,58 @@ document.addEventListener("DOMContentLoaded", async () => {
           Rate: $${kitchen.rate} / hour
         </div>
         <div class="kitchenDetails__info__button">
-          <button id="kitchenDetails__info-button" class="kitchenDetails__info_button-bookings">${roleId === '1' ? 'See All Bookings' : 'Book Now'}</button>
-        </div>
-      </div/
-      <div class="kitchenDetails__info__featured-img-container">
-        <div class="kitchenDetails__info__featured-img">
-          <img src="${kitchen.imgPath[0]}">
+          <button id="kitchenDetails__info-button" class="kitchenDetails__info_button-bookings">${
+      roleId === "1" ? "See All Bookings" : "Book Now"}</button>
         </div>
       </div>
     `;
+    // document.querySelector(".kitchenDetails__row-1__info").innerHTML = `
+    //   <div class="kitchenDetails__detail-container">
+    //     <div class="kitchenDetails__info__name">
+    //       ${kitchen.name}
+    //     </div>
+    //     <div class="kitchenDetails__info__description">
+    //       Beautiful Kitchen In ${kitchen.city.cityName}
+    //     </div>
+    //     <div class="kitchenDetails__info__star-rating">
+    //       ${starRating} Star Rating
+    //     </div>
+    //     <div class="kitchenDetails__info__rate">
+    //       Rate: $${kitchen.rate} / hour
+    //     </div>
+    //     <div class="kitchenDetails__info__button">
+    //       <button id="kitchenDetails__info-button" class="kitchenDetails__info_button-bookings">${roleId === '1' ? 'See All Bookings' : 'Book Now'}</button>
+    //     </div>
+    //   </div/
+    //   <div class="kitchenDetails__info__featured-img-container">
+    //     <div class="kitchenDetails__info__featured-img">
+    //       <img src="${kitchen.imgPath[0]}">
+    //     </div>
+    //   </div>
+    // `;
 
+    // <div class="kitchenDetails__detail-container">
+      //   <div class="kitchenDetails__info__name">
+      //     ${kitchen.name}
+      //   </div>
+      //   <div class="kitchenDetails__info__description">
+      //     Beautiful Kitchen In ${kitchen.city.cityName}
+      //   </div>
+      //   <div class="kitchenDetails__info__star-rating">
+      //     ${starRating} Star Rating
+      //   </div>
+      //   <div class="kitchenDetails__info__rate">
+      //     Rate: $${kitchen.rate} / hour
+      //   </div>
+      //   <div class="kitchenDetails__info__button">
+      //     <button id="kitchenDetails__info-button" class="kitchenDetails__info_button-bookings">${roleId === '1' ? 'See All Bookings' : 'Book Now'}</button>
+      //   </div>
+      // </div/
+      // <div class="kitchenDetails__info__featured-img-container">
+      //   <div class="kitchenDetails__info__featured-img">
+      //     <img src="${kitchen.imgPath[0]}">
+      //   </div>
+      // </div>
 
     // document.querySelector(".kitchenDetails__row-1__featured-img").innerHTML = `
     //   <img src="${kitchen.imgPath[0]}">
@@ -90,7 +132,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       // console.log(img);
       imgs += `
       <div class="kitchenDetails__kitchen-img">
-        <img class="card-img kitchenDetails__images" src="${img}">
+        <img class="kitchenDetails__images" src="${img}">
       </div>`
     });
 
@@ -110,7 +152,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       features += `
       <div class="kitchenDetails__feature-container">
         <div class="kitchenDetails__feature-img">
-          <img class="kitchenDetails__feature__img card-img-top" src="${feature.imgPath}">
+          <img class="kitchenDetails__feature__img" src="${feature.imgPath}">
         </div>
         <div class="kitchenDetails__feature">
           ${feature.feature}
@@ -124,13 +166,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     // console.log(kitchenReviews);
     let kitchenReviewHTML = "";
     kitchenReviews.forEach(kitchenReview => {
+      // kitchenReviewHTML += `
+      // <div class="kitchenDetails__review-name">
+      //   ${kitchenReview.User.firstName} ${kitchenReview.User.lastName[0]}.
+      // </div>
+      // <div class="kitchenDetails__review">
+      //   <div class="kitchenDetails__review-comment">${kitchenReview.comment}</li>
+      // </div>`
       kitchenReviewHTML += `
-      <div class="kitchenDetails__review-name">
-        ${kitchenReview.User.firstName} ${kitchenReview.User.lastName[0]}.
-      </div>
-      <div class="kitchenDetails__review">
-        <div class="kitchenDetails__review-comment">${kitchenReview.comment}</li>
-      </div>`
+        <li class="mdl-list__item mdl-list__item--three-line">
+          <span class="mdl-list__item-primary-content">
+            <i class="material-icons mdl-list__item-avatar">person</i>
+            <span>${kitchenReview.User.firstName} ${kitchenReview.User.lastName[0]}
+              <span class="mdl-list__item-text-body">
+                ${kitchenReview.comment}
+              </span>
+            </span>
+          </span>
+          <span class="mdl-list__item-secondary-content">
+            <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+          </span>
+        </li>
+      `;   
     });
 
     document.querySelector(".kitchenDetails__row-5__reviews").innerHTML = kitchenReviewHTML;
