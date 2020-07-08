@@ -191,12 +191,11 @@ body {
 }
 
 .past-booking-detail {
-  border: 2px solid #004873;
-  border-radius: 15px;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -210,6 +209,10 @@ body {
   color: #004873;
   font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
+}
+
+.past-booking-kitchen-name {
+  font-weight: bold;
 }
 
 h3, .current-booking-header {
@@ -241,11 +244,12 @@ h3, .current-booking-header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .current-bookings .current-booking-detail {
-  border: 2px solid #004873;
-  border-radius: 15px;
+  min-height: 0px;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -265,6 +269,10 @@ h3, .current-booking-header {
   font-weight: 300;
 }
 
+.current-booking-kitchen-name {
+  font-weight: bold;
+}
+
 .cancel-booking-button {
   text-align: center;
   font-size: 19px;
@@ -281,6 +289,9 @@ h3, .current-booking-header {
   border: none;
   outline: none;
   font-weight: 400;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .cancel-booking-button:hover {
