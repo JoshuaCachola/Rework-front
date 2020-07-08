@@ -95,8 +95,9 @@ logInForm.addEventListener("submit", async (e) => {
 
 });
 
-signInAsDemoGuestButton.addEventListener('click', async () => {
-  console.log('clicked');
+signInAsDemoGuestButton.addEventListener('click', async (e) => {
+  e.preventDefault();
+
   const body = {
     userName: 'demo_guest',
     password: 'demo_guest'
@@ -129,8 +130,9 @@ signInAsDemoGuestButton.addEventListener('click', async () => {
   }
 });
 
-signInAsDemoHostButton.addEventListener('click', async () => {
-  console.log('clicked');
+signInAsDemoHostButton.addEventListener('click', async (e) => {
+  e.preventDefault();
+
   const body = {
     userName: 'demo_host',
     password: 'demo_host'
