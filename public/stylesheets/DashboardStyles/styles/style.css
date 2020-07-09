@@ -126,6 +126,12 @@ body {
   margin-bottom: 10px;
 }
 
+.host-bookings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .bookings-container-label {
   font-size: 30px;
   text-align: center;
@@ -139,10 +145,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .pastBookings {
@@ -172,7 +174,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-top: 1px solid #004873;
   width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -233,8 +234,6 @@ h3, .current-booking-header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 .current-bookings {
