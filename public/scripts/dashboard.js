@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             return `
             <div class="past-booking-container past-booking${id}">
-                <div class="past-booking-detail">
+                <div class="past-booking-detail mdl-card mdl-shadow--4dp">
                     <div class="past-booking-kitchen-name"> ${name} </div>
                     <div class="past-booking-kitchen-address"> ${streetAddress} ${city}, ${state} </div>
                     <div class="past-booking-date"> ${startMonth}/${startDay}/${startYear} to ${endMonth}/${endDay}/${endYear} </div>
@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             return `
             <div class="current-booking-container current-booking${id}">
-                <div class="current-booking-detail">
+                <div class="current-booking-detail mdl-card mdl-shadow--4dp">
                     <div class="current-booking-kitchen-name"> ${name} </div>
                     <div class="current-booking-kitchen-address"> ${streetAddress} ${city}, ${state} </div>
                     <div class="current-booking-date"> ${startMonth}/${startDay}/${startYear} to ${endMonth}/${endDay}/${endYear} </div>
