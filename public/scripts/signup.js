@@ -11,7 +11,6 @@ document.querySelector(".help").addEventListener('click', () => {
 
 signUpForm.addEventListener("submit", async (ev) => {
   ev.preventDefault();
-  console.log("HERE!!!!!!!!!!!");
   const formData = new FormData(signUpForm);
   const body = {};
   for (let data of formData.entries()) {
