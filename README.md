@@ -6,8 +6,9 @@ Check out AirCnC here: [AirCnC](www.aircnc.us)
 Backend for AirCnC here: [AirCnC-Backend](https://github.com/JoshuaCachola/Rework-back)
 
 ## Documentation Links
-
-## Available Commands
 - [Front End Routes]
 - [Back End Routes]
 - [Schema Image]
+
+
+## Available Commands
