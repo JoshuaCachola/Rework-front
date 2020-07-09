@@ -74,24 +74,10 @@ h1
     padding: 0px 0px 10px 0px
 
 .kitchen-review
-    display: flex
-    flex-direction: column
-    justify-content: center
-    border: 1px solid $blue
-    border-radius: 25px
-    width: 50%
+    text-align: center
 
 .kitchen-review-label
-    display: flex
-    justify-content: center
-    font-size: 50px
     @include fontStyle()
-
-// .kitchen-review-form
-//     display: flex
-//     flex-direction: column
-//     justify-content: center
-//     width: 50%
 
 .review-selector-container, .star-and-clean-container, .feature-and-would-container, .comment-container, .submit-button-container
     display: flex
@@ -148,6 +134,7 @@ button
 .current-bookings__picture-text
     position: absolute
     text-align: center
+    color: white
 
 .past-bookings
     display: flex
@@ -158,3 +145,9 @@ button
     display: flex
     flex-wrap: wrap
     justify-content: center
+
+.guest-review__profile-page
+    width: 450px
+
+.guest-review__form-elements
+    margin: 10px 0px
