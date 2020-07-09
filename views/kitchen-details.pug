@@ -3,7 +3,6 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
     link(rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png")
     link(rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png")
     link(rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png")
@@ -13,6 +12,7 @@ html(lang="en")
     script(src="/node_modules/material-design-lite/material.min.js")
     link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="api" href=`${api}`)
+
     style
       include ../public/stylesheets/KitchenDetailsStyle/styles/style.css
     title AirCnC - Kitchen Details
@@ -24,22 +24,17 @@ html(lang="en")
         button(class="profile" id='profile-button') Profile
         button(class="listings" id='listings-button') Listings
         button(class="logoutButton" id='logout-button' href="http://localhost:4000/log-out") Log out
-    .navListings
-
-    .kitchenDetails
-      .kitchenDetails__row-1
-        .kitchenDetails__row-1__info
+    .navListings.card.card.c
+.card.card-body
+    .kitchenDetails.card.car
+      .kitchenDetails__row-1.card.card
+        .kitchenDetails__rownfo
       .kitchenDetails__row-2
         .kitchenDetails__row-2__images
       .kitchenDetails__row-3
-        //- .kitchenDetails__row-header
-        //- .kitchenDetails__row-3__detailsHostBio
+        //- .kitchenDetails__row-header.card.card.c
+        //- .kitchenDetails__row-3__deta
       .kitchenDetails__row-4
-        #features-header.kitchenDetails__row-header Features
+        #features-header.kitchenDetails__row-header
         .kitchenDetails__row-4__features
       .kitchenDetails__row-5
-        #features-header.kitchenDetails__row-header Reviews
-        .kitchenDetails__row-5-header
-        ul
-          .kitchenDetails__row-5__reviews
-

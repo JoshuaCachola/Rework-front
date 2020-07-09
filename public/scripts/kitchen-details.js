@@ -70,8 +70,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           Rate: $${kitchen.rate} / hour
         </div>
         <div class="kitchenDetails__info__button">
-          <button id="kitchenDetails__info-button" class="kitchenDetails__info_button-bookings">${
-      roleId === "1" ? "See All Bookings" : "Book Now"}</button>
+          <button id="kitchenDetails__info-button" class="kitchenDetails__info_button-bookings">Book Now</button>
         </div>
       </div>
     `;
