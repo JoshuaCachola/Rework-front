@@ -35,7 +35,7 @@ body
     // margin-bottom: 20px
     // margin-left: 80px
     background-color: #f6f6f6
-    
+
 .demo-card-event.mdl-card
     background-color: #f6f6f6
 
@@ -73,19 +73,33 @@ body
     @include star()
 
 .kitchenDetails__row-2__images
-    background-color: #f6f6f6
+    background-color: $white
     display: flex
     flex-direction: row
-    justify-content: space-evenly
-    max-width: 100%
+    justify-content: center
+    // max-width: 100%
     // max-width: 1300px
     // max-height: 720px
     // overflow: auto
 
+.top
+    display: flex
+    justify-content: space-around
+    background-color: $white
+
+.kitchenDetails__row-2
+    padding: 10px
+    display: flex
+    justify-content: center
+    align-items: center
 
 .kitchenDetails__kitchen-img img
-    width: 250px
-    height: 200px
+    // width: 250px
+    // height: 200px
+    width: 195px
+    height: 170px
+    object-fit: fill
+    padding: 10px
 
 .kitchenDetails__row-4
     background-color: #ffffff
@@ -118,21 +132,24 @@ body
     // font-size: 20px
     outline: none
     text-align: center
+    padding: 10px
     // width: 40%
 
 .kitchenDetails__info_button-bookings
     // @include buttonStyleBlue()
     // border: 1px solid $blue
-    // border-radius: 20px
+    border-radius: 20px
     font-size: 15px
-    // margin: 8px 25px 8px
+    margin: 8px 25px 8px
     text-align: center
+    background-color: $blue
+    color: $white
+    // justify-content: center
 
 .kitchenDetails__info__button
     display: flex
-    padding-top: 30px
-    justify-content: flex-start
-    background-colo: white
+    padding-top: 5px
+    justify-content: center
     border: none
     box-sizing: none
     // width: 53%
@@ -232,9 +249,14 @@ li
     list-style-type: none
 
 .demo-card-event.mdl-card
-	width: 256px
+	width: 500px
 	height: 256px
 	background: $white
+  
+
+.mdl-shadow--2dp
+    box-shadow: none
+    padding: 15px
 
 .demo-card-event > .mdl-card__actions
 	border-color: rgba(255, 255, 255, 0.2)

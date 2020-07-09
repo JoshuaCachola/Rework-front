@@ -112,7 +112,7 @@ body {
 }
 
 .kitchenDetails__row-2__images {
-  background-color: #f6f6f6;
+  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,15 +120,39 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  max-width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #ffffff;
+}
+
+.kitchenDetails__row-2 {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .kitchenDetails__kitchen-img img {
-  width: 250px;
-  height: 200px;
+  width: 195px;
+  height: 170px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  padding: 10px;
 }
 
 .kitchenDetails__row-4 {
@@ -174,22 +198,26 @@ body {
   font-size: 25px;
   outline: none;
   text-align: center;
+  padding: 10px;
 }
 
 .kitchenDetails__info_button-bookings {
+  border-radius: 20px;
   font-size: 15px;
+  margin: 8px 25px 8px;
   text-align: center;
+  background-color: #004873;
+  color: #ffffff;
 }
 
 .kitchenDetails__info__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 30px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  background-colo: white;
+  padding-top: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: none;
   -webkit-box-sizing: none;
           box-sizing: none;
@@ -304,9 +332,15 @@ li {
 }
 
 .demo-card-event.mdl-card {
-  width: 256px;
+  width: 500px;
   height: 256px;
   background: #ffffff;
+}
+
+.mdl-shadow--2dp {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 15px;
 }
 
 .demo-card-event > .mdl-card__actions {
