@@ -163,6 +163,9 @@
 }
 
 .checkout__kitchen-text-container-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 20px;
   margin-left: 10px;
 }
