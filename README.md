@@ -8,7 +8,7 @@ Backend for AirCnC here: [AirCnC-Backend](https://github.com/JoshuaCachola/Rewor
 ## Documentation Links
 - [Front End Routes](https://github.com/JoshuaCachola/Rework-front/blob/master/Documentation/frontend-routes.md)
 - [Back End Routes](https://github.com/JoshuaCachola/Rework-front/blob/master/Documentation/backend-routes.md)
-- [Schema Image]
+- [Schema Image](https://github.com/JoshuaCachola/Rework-front/blob/master/Documentation/Schema.png)
 
 
 ## Available Commands
