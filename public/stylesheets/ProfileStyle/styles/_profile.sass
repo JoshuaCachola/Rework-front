@@ -7,7 +7,6 @@ h1
     font-size: 50px
     @include fontStyle()
 
-
 .listingsButton, .logoutButton, .profile
     @include buttonStyle()
 
@@ -33,8 +32,8 @@ h1
     display: flex
     flex-direction: column
     justify-content: center
-    @include fontStyle()
-    padding: 10px
+    // @include fontStyle()
+    //     padding: 10px
 
 .bookings-bottom-half
     display: flex
@@ -42,7 +41,7 @@ h1
 
 .bookings-top-half
     display: flex
-    flex-direction: row
+    flex-direction: column
     justify-content: space-around
     padding-bottom: 20px
 
@@ -73,7 +72,6 @@ h1
 
 .current-booking-confirmation, .current-booking-kitchen-name, .current-booking-kitchen-address, .current-booking-date,
     padding: 0px 0px 10px 0px
-
 
 .kitchen-review
     display: flex
@@ -116,8 +114,6 @@ h1
 .errors-container
     @include fontStyleError()
 
-
-
 button
     @include buttonStyleBlue()
     @include buttonShadow()
@@ -131,3 +127,34 @@ button
 
 .current-booking-container
     // height: 150px
+
+.demo-card-square.mdl-card
+    width: 320px
+    height: 345px
+    margin: 20px 20px
+
+.demo-card-square-current.mdl-card
+    width: 320px
+    height: 345px
+    margin: 20px 20px
+
+.demo-card-square > .mdl-card__title
+    color: #fff
+
+.current-bookings__picture
+    width: 288px
+    height: 216px
+
+.current-bookings__picture-text
+    position: absolute
+    text-align: center
+
+.past-bookings
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+.current-bookings
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
