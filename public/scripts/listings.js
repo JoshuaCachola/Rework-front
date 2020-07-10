@@ -6,6 +6,10 @@ if (localStorage.getItem("AIRCNC_CURRENT_USER_ROLE") === '1') {
 }
 
 function initMap(latLngRate) {
+  const infoWindow = new window.google.maps.InfoWindow({
+    content: "<div>SOME TEXT</div>",
+  });
+
   if (latLngRate) {
     const map = new google.maps.Map(
       document.getElementById('map'), {
@@ -13,12 +17,47 @@ function initMap(latLngRate) {
       center: { lat: latLngRate[0][0], lng: latLngRate[0][1] }
     });
 
-    latLngRate.forEach(([lat, lng, rate]) => {
-      new google.maps.Marker({
+    latLngRate.forEach(([lat, lng, rate, obj]) => {
+      const marker = new google.maps.Marker({
         position: { lat, lng },
         map,
         label: `$${rate}`
       });
+
+      marker.addListener('click', async (e) => {
+        const infoWindowNode = document.createElement('div');
+        const reviewCount = obj.kitchenReview.length
+        infoWindowNode.innerHTML = `
+      <div class="info-window">
+        <div class="info-window__picture-container">
+          <div class="infow-window__name">
+            ${obj.name}
+          </div>
+          <img class="info-window__picture" src=${obj.imgPath[0]} />
+
+        </div>
+        <div class="info-window__reviews">
+          <img class="info-window__reviews-icon" src="https://img.icons8.com/fluent/48/000000/star.png"/> ${reviewCount} reviews
+        </div>
+        <div class="info-window__features">
+          <div>
+            ${obj.kitchenFeature[0].feature.feature} •&nbsp
+          </div>
+          <div>
+            ${obj.kitchenFeature[1].feature.feature} •&nbsp
+          </div>
+          <div>
+            ${obj.kitchenFeature[2].feature.feature}
+          </div>
+        </div>
+        <div class="info-window__rate">
+          <span><b>$${rate}</b> / hour</span>
+        </div>
+      </div>
+      `
+        infoWindow.setContent(infoWindowNode);
+        infoWindow.open(map, marker);
+      })
     });
   }
 }
@@ -62,7 +101,8 @@ const getListings = async (search) => {
     const kitchenListings = document.getElementById("kitchenListings");
     const latLngRate = [];
     const kitchensHTML = kitchens.map((obj, i) => {
-      latLngRate.push([parseFloat(obj.lat), parseFloat(obj.lng), obj.rate.toString()]);
+
+      latLngRate.push([parseFloat(obj.lat), parseFloat(obj.lng), obj.rate.toString(), obj]);
 
       let kitchenFeatures = obj.kitchenFeature;
       let features = "";
@@ -88,7 +128,7 @@ const getListings = async (search) => {
           }
         });
       }
-      console.log(obj.imgPath[0]);
+
       // star rating
       // <span> Star Rating (${avgStarRating / starRatings.length ? avgStarRating / starRatings.length : 0})</span>
       // would rent again
