@@ -1,8 +1,8 @@
 
 # AirCook'n'Cuisine
-something super witty here tbd
+The perfect solution for both chefs and cooking enthusiasts looking for something different - book your dream kitchen today!
 
-Check us out here: [AirCnC](https://www.aircnc.us)
+Check us out here: [AirCnC](http://www.aircnc.us/)
 
 To log-in as a guest or a host, you can either use the pre-set buttons on the login page, or create your own account 
 
