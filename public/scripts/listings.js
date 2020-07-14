@@ -87,17 +87,20 @@ const getListings = async (search) => {
       throw res;
     }
 
-    if (res.status === 401) {
-      window.location.href = "/log-in";
-      return;
-    }
+    // if (res.status === 401) {
+    //   window.location.href = "/log-in";
+    //   return;
+    // }
 
-    if (!res.ok) {
-      throw res;
-    }
+    // if (!res.ok) {
+    //   throw res;
+    // }
 
     const { kitchens } = await res.json();
-    // console.log(kitchens);
+    if (!kitchens.length) {
+      alert("There are no kitchens in that city");
+      return;
+    }
     const kitchenListings = document.getElementById("kitchenListings");
     const latLngRate = [];
     const kitchensHTML = kitchens.map((obj, i) => {
