@@ -118,21 +118,21 @@ const kitchenDetails = async () => {
     }
   });
 
-  const { kitchen, kitchenReviews, starRating, kitchenFeatures } = await res.json();
-  console.log(kitchenReviews);
-  console.log(kitchenFeatures);
+  const { kitchen, kitchenReviews, starRating } = await res.json();
+  // console.log(kitchenReviews);
+  // console.log(kitchenFeatures);
 
-  let featuresHTML = "";
-  kitchenFeatures.forEach(({ feature }) => {
-    featuresHTML += `
-    <div class="bookings-form__left-bottom__features-image">
-      <div class="bookings-form__left-bottom__features-name">
-        ${feature.feature}
-      </div>
-      <img class="bookings-form__left-bottom__features-img" src="${feature.imgPath}">
-    </div>
-    `;
-  });
+  // let featuresHTML = "";
+  // kitchenFeatures.forEach(({ feature }) => {
+  //   featuresHTML += `
+  //   <div class="bookings-form__left-bottom__features-image">
+  //     <div class="bookings-form__left-bottom__features-name">
+  //       ${feature.feature}
+  //     </div>
+  //     <img class="bookings-form__left-bottom__features-img" src="${feature.imgPath}">
+  //   </div>
+  //   `;
+  // });
 
   // document.querySelector(".bookings-form__left-bottom__features-body").innerHTML = featuresHTML;
   document.querySelector(".checkout__kitchen-description").innerHTML = `
@@ -253,6 +253,7 @@ kitchenDetails();
 
 document.querySelector(".checkout__submit-booking")
   .addEventListener("submit", async ev => {
+    console.log('is this working?');
     ev.preventDefault();
     const currentURL = window.location.href;
     const kitchenId = currentURL.match(/\d+/g)[1];

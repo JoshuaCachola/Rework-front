@@ -59,7 +59,11 @@ logInForm.addEventListener("submit", async (e) => {
     localStorage.setItem("AIRCNC_CURRENT_USER_ROLE", role);
 
     // redirect to /kitchens for guests, dashboard for hosts:
-    window.location.href = "/listings";
+    if (role === 1) {
+      window.location.href = "/listings";
+    } else {
+      window.location.href = "/dashboard"
+    }
 
 
   } catch (err) {
@@ -126,7 +130,7 @@ signInAsDemoGuestButton.addEventListener('click', async (e) => {
     // redirect to /kitchens, when hosts are sent there they will be sent to /dashboard:
     window.location.href = "/listings";
   } catch (err) {
-
+    console.error(err);
   }
 });
 

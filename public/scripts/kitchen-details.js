@@ -56,26 +56,26 @@ document.addEventListener("DOMContentLoaded", async () => {
          *    - kitchen.reviews.starRating
          *    - kitchen.rate
          *********************************/
-        const roleId = localStorage.getItem("AIRCNC_CURRENT_USER_ROLE");
+        // const roleId = localStorage.getItem("AIRCNC_CURRENT_USER_ROLE");
         document.querySelector(".kitchenDetails__row-1__info").innerHTML = `
-      <div class="demo-card-event mdl-card mdl-shadow--2dp">
-        <div class="kitchenDetails__info__name">
-          ${kitchen.name}
-        </div>
-        <div class="kitchenDetails__info__description">
-          Beautiful Kitchen In ${kitchen.city.cityName}
-        </div>
-        <div class="kitchenDetails__info__star-rating">
-          ${starRating} Star Rating
-        </div>
-        <div class="kitchenDetails__info__rate">
-          Rate: $${kitchen.rate} / hour
-        </div>
-        <div class="kitchenDetails__info__button">
-          <button id="kitchenDetails__info-button" class="kitchenDetails__info_button-bookings">Book Now</button>
-        </div>
-      </div>
-    `;
+          <div class="demo-card-event mdl-card mdl-shadow--2dp">
+            <div class="kitchenDetails__info__name">
+              ${kitchen.name}
+            </div>
+            <div class="kitchenDetails__info__description">
+              Beautiful Kitchen In ${kitchen.city.cityName}
+            </div>
+            <div class="kitchenDetails__info__star-rating">
+              ${starRating} Star Rating
+            </div>
+            <div class="kitchenDetails__info__rate">
+              Rate: $${kitchen.rate} / hour
+            </div>
+            <div class="kitchenDetails__info__button">
+              <button id="kitchenDetails__info-button" class="kitchenDetails__info_button-bookings">Book Now</button>
+            </div>
+          </div>
+        `;
         // document.querySelector(".kitchenDetails__row-1__info").innerHTML = `
         //   <div class="kitchenDetails__detail-container">
         //     <div class="kitchenDetails__info__name">
@@ -155,13 +155,13 @@ document.addEventListener("DOMContentLoaded", async () => {
           ".kitchenDetails__row-2__images"
         ).innerHTML = imgs;
 
-        document.querySelector(".kitchenDetails__row-3").innerHTML = `
-      <div class="kitchenDetails__row-3__host-text">
-        Hosted by ${kitchen.user.firstName}
-      </div>
-      <div class="kitchenDetails__row-3__description-text">
-        "${kitchen.description}"
-      </div>`;
+      //   document.querySelector(".kitchenDetails__row-3").innerHTML = `
+      // <div class="kitchenDetails__row-3__host-text">
+      //   Hosted by ${kitchen.user.firstName}
+      // </div>
+      // <div class="kitchenDetails__row-3__description-text">
+      //   "${kitchen.description}"
+      // </div>`;
 
         let features = "";
         kitchenFeatures.forEach(({ feature }) => {
