@@ -327,7 +327,7 @@ h3, .current-booking-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 200%;
+  height: 250%;
   width: 512px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -337,6 +337,8 @@ h3, .current-booking-header {
       -ms-flex-align: center;
           align-items: center;
   margin: 20px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .guest-review-form {
@@ -347,12 +349,15 @@ h3, .current-booking-header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
   color: #004873;
   font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
   width: 70%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .guest-review-label {
