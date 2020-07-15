@@ -1,6 +1,8 @@
 import { logOut, isLoggedIn, goToProfile } from "./tools.js";
 import { api } from "./getapi.js";
 
+let markerIcon = "images/map_marker.png";
+
 if (localStorage.getItem("AIRCNC_CURRENT_USER_ROLE") === '1') {
   window.location.href = "/dashboard";
 }
@@ -21,7 +23,9 @@ function initMap(latLngRate) {
       const marker = new google.maps.Marker({
         position: { lat, lng },
         map,
-        label: `$${rate}`
+        icon: markerIcon,
+        label: `$${rate}`,
+        animation: google.maps.Animation.DROP
       });
 
       marker.addListener('click', async (e) => {
@@ -39,17 +43,7 @@ function initMap(latLngRate) {
         <div class="info-window__reviews">
           <img class="info-window__reviews-icon" src="https://img.icons8.com/fluent/48/000000/star.png"/> ${reviewCount} reviews
         </div>
-        <div class="info-window__features">
-          <div>
-            ${obj.kitchenFeature[0].feature.feature} •&nbsp
-          </div>
-          <div>
-            ${obj.kitchenFeature[1].feature.feature} •&nbsp
-          </div>
-          <div>
-            ${obj.kitchenFeature[2].feature.feature}
-          </div>
-        </div>
+        
         <div class="info-window__rate">
           <span><b>$${rate}</b> / hour</span>
         </div>
@@ -62,6 +56,17 @@ function initMap(latLngRate) {
   }
 }
 
+// <div class="info-window__features">
+        //   <div>
+        //     ${obj.kitchenFeature[0].feature.feature} •&nbsp
+        //   </div>
+        //   <div>
+        //     ${obj.kitchenFeature[1].feature.feature} •&nbsp
+        //   </div>
+        //   <div>
+        //     ${obj.kitchenFeature[2].feature.feature}
+        //   </div>
+        // </div>
 const getListings = async (search) => {
   try {
     // const userId = localStorage.getItem("AIRCNC_USER_ID");
@@ -165,6 +170,7 @@ const getListings = async (search) => {
           </div>
         </div>`;
     });
+
     initMap(latLngRate);
     kitchenListings.innerHTML = kitchensHTML.join("");
 
