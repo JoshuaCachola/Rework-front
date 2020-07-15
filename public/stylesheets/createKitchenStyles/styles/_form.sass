@@ -64,6 +64,16 @@ body
     font-size: 18px
     margin-bottom: 10px
 
+#kitchen-form
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+.mdl-card__title-text
+    @include fontStyleBold()
+
+.mdl-card__title
+    justify-content: center
+
 .kitchen-form__name-input, .kitchen-form__state-input, div.kitchen-form__city-input, .kitchen-form__address-input, .kitchen-form__rate-input
     @include fontStyleBold()
     display: flex
@@ -96,6 +106,7 @@ body
     display: flex
     flex-direction: column
     outline: none
+    justify-content: space-evenly
 
 .kitchen-form__top
     display: flex
@@ -116,6 +127,12 @@ body
     margin-top: 25px
     margin-bottom: 25px
 
+.mdl-shadow--2dp
+    box-shadow: none
+    width: 600px
+
+.mdl-card__supporting-text
+   
 .features__img
     object-fit: cover
 // .features__img > img

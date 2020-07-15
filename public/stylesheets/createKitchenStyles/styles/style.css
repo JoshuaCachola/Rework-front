@@ -125,6 +125,31 @@ body {
   margin-bottom: 10px;
 }
 
+#kitchen-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.mdl-card__title-text {
+  color: #004873;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+
+.mdl-card__title {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .kitchen-form__name-input, .kitchen-form__state-input, div.kitchen-form__city-input, .kitchen-form__address-input, .kitchen-form__rate-input {
   color: #004873;
   font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -184,6 +209,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   outline: none;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .kitchen-form__top {
@@ -219,6 +247,12 @@ body {
   margin: auto;
   margin-top: 25px;
   margin-bottom: 25px;
+}
+
+.mdl-shadow--2dp {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 600px;
 }
 
 .features__img {
