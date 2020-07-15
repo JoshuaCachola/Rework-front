@@ -32,8 +32,10 @@ window.addEventListener('DOMContentLoaded', async () => {
     cityDropDown.innerHTML = citiesListHTML;
 
     //display features to choose from
-    const featuresDivLeft = document.getElementById('features__left');
-    const featuresDivRight = document.getElementById('features__right');
+    // const featuresDivLeft = document.getElementById('features__left');
+    // const featuresDivRight = document.getElementById('features__right');
+    const featuresTableDiv = document.querySelector('.features__table');
+
     const features = await fetch(`${api}tools/features`)
     const featuresData = await features.json();
     //eleminates whitespace in feature for use in name attribute
@@ -41,60 +43,80 @@ window.addEventListener('DOMContentLoaded', async () => {
         return feature.feature.split(" ").join("");
     });
 
-    let featuresHTMLLeft = ``;
-    let featuresHTMLRight = ``;
-    let extraApplianceIndex = 50000;
+    let featuresTable = '';
     for (let i = 0; i < featuresData.features.length; i++) {
-        const feature = featuresData.features[i]
-        if (featureNames[i] === 'ExtraAppliances') {
-            featuresHTMLRight += `<div class='features__extra-appliances'>
-                                <h2>${feature.feature}</h2>
-                            </div>`
-            extraApplianceIndex = i;
-        } else if (i > extraApplianceIndex) {
-            featuresHTMLRight += `<div class='features__feature'>
-                            <div class='features__left'>
-                                <div class='features__img features__img-${featureNames[i]}'>
-                                    <img src="/images/feature-images/${featureNames[i]}.jpg" alt=${featureNames[i]}>
-                                </div>
-                            </div>
-                            <div class='features__middle'>
-                                <div class='features__text features__text-${featureNames[i]}'>
-                                    <label for=${featureNames[i]}>${feature.feature}</label>
-                                </div>
-                            </div>
-                            <div class='features__right'>
-                                <div class='features__checkbox features__checkbox-${featureNames[i]}'>
-                                    <input type="checkbox" id=${featureNames[i]} name=${featureNames[i]} value=${feature.id}>
-                                </div>
-                            </div>
-                        </div>
-                        `
-        } else {
-            featuresHTMLLeft += `<div class='features__feature'>
-                            <div class='features__left'>
-                                <div class='features__img features__img-${featureNames[i]}'>
-                                    <img src="/images/feature-images/${featureNames[i]}.jpg" alt=${featureNames[i]}>
-                                </div>
-                            </div>
-                            <div class='features__middle'>
-                                <div class='features__text features__text-${featureNames[i]}'>
-                                    <label for=${featureNames[i]}>${feature.feature}</label>
-                                </div>
-                            </div>
-                            <div class='features__bottom'>
-                                <div class='features__checkbox features__checkbox-${featureNames[i]}'>
-                                    <input type="checkbox" id=${featureNames[i]} name=${featureNames[i]} value=${feature.id}>
-                                </div>
-                            </div>
-                        </div>
-                        `
-        }
-
+        const feature = featuresData.features[i];
+        let row = `
+            <tr>
+                <td class="features__img">
+                    <img src=${feature.imgPath} alt=${feature.feature}>
+                </td>
+                <td class="mdl-data-table__cell--non-numeric">
+                    ${feature.feature}
+                </td>
+                <td>
+                    <input type="checkbox" id=${featureNames[i]} name=${featureNames[i]} value=${feature.id}>
+                </td>
+            </tr>
+        `;
+        featuresTable += row;
     }
 
-    featuresDivLeft.innerHTML = featuresHTMLLeft;
-    featuresDivRight.innerHTML = featuresHTMLRight;
+    featuresTableDiv.innerHTML = featuresTable;
+    // let featuresHTMLLeft = ``;
+    // let featuresHTMLRight = ``;
+    // let extraApplianceIndex = 50000;
+    // for (let i = 0; i < featuresData.features.length; i++) {
+    //     const feature = featuresData.features[i]
+    //     if (featureNames[i] === 'ExtraAppliances') {
+    //         featuresHTMLRight += `<div class='features__extra-appliances'>
+    //                             <h2>${feature.feature}</h2>
+    //                         </div>`
+    //         extraApplianceIndex = i;
+    //     } else if (i > extraApplianceIndex) {
+    //         featuresHTMLRight += `<div class='features__feature'>
+    //                         <div class='features__left'>
+    //                             <div class='features__img features__img-${featureNames[i]}'>
+    //                                 <img src="/images/feature-images/${featureNames[i]}.jpg" alt=${featureNames[i]}>
+    //                             </div>
+    //                         </div>
+    //                         <div class='features__middle'>
+    //                             <div class='features__text features__text-${featureNames[i]}'>
+    //                                 <label for=${featureNames[i]}>${feature.feature}</label>
+    //                             </div>
+    //                         </div>
+    //                         <div class='features__right'>
+    //                             <div class='features__checkbox features__checkbox-${featureNames[i]}'>
+    //                                 <input type="checkbox" id=${featureNames[i]} name=${featureNames[i]} value=${feature.id}>
+    //                             </div>
+    //                         </div>
+    //                     </div>
+    //                     `
+    //     } else {
+    //         featuresHTMLLeft += `<div class='features__feature'>
+    //                         <div class='features__left'>
+    //                             <div class='features__img features__img-${featureNames[i]}'>
+    //                                 <img src="/images/feature-images/${featureNames[i]}.jpg" alt=${featureNames[i]}>
+    //                             </div>
+    //                         </div>
+    //                         <div class='features__middle'>
+    //                             <div class='features__text features__text-${featureNames[i]}'>
+    //                                 <label for=${featureNames[i]}>${feature.feature}</label>
+    //                             </div>
+    //                         </div>
+    //                         <div class='features__bottom'>
+    //                             <div class='features__checkbox features__checkbox-${featureNames[i]}'>
+    //                                 <input type="checkbox" id=${featureNames[i]} name=${featureNames[i]} value=${feature.id}>
+    //                             </div>
+    //                         </div>
+    //                     </div>
+    //                     `
+    //     }
+
+    // }
+
+    // featuresDivLeft.innerHTML = featuresHTMLLeft;
+    // featuresDivRight.innerHTML = featuresHTMLRight;
 
 
 
