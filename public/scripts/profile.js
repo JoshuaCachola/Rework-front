@@ -11,7 +11,7 @@ if (localStorage.getItem("AIRCNC_CURRENT_USER_ROLE") === '1') {
 
 // event listener for cancel buttons
 currentBookingsContainer.addEventListener("click", async () => {
-    if ((event.target.value).startsWith("bookings/")) {
+    if (event.target.value && (event.target.value).startsWith("bookings/")) {
         try {
             const res = await fetch(`${api}${event.target.value}`, {
                 method: "PATCH",
@@ -66,7 +66,7 @@ kitchenReview.addEventListener("submit", async (ev) => {
             wouldRentAgain: `${wouldRentAgain.checked ? true : false}`,
             featureBool: `${featureBool.checked ? true : false}`
         };
-    // res = res.json();
+        // res = res.json();
 
 
         const res = await fetch(`${api}kitchens/${kitchenId}/reviews`, {
@@ -83,36 +83,36 @@ kitchenReview.addEventListener("submit", async (ev) => {
         }
 
         // res = res.json();
-    window.location.href = '/profile'
+        window.location.href = '/profile'
     } catch (err) {
         console.log(err);
         if (err.status >= 400 && err.status < 600) {
-          const errorJSON = await err.json();
-          const errorsContainer = document.querySelector(".errors-container");
-          let errorsHtml = [
-            `
+            const errorJSON = await err.json();
+            const errorsContainer = document.querySelector(".errors-container");
+            let errorsHtml = [
+                `
               <div class="alert alert-danger">
                   Something went wrong. Please try again.
               </div>
             `,
-          ];
-          const { errors } = errorJSON;
-          if (errors && Array.isArray(errors)) {
-            errorsHtml = errors.map(
-              (message) => `
+            ];
+            const { errors } = errorJSON;
+            if (errors && Array.isArray(errors)) {
+                errorsHtml = errors.map(
+                    (message) => `
                 <div class="alert alert-danger">
                     ${message}
                 </div>
               `
-            );
-          }
-          errorsContainer.innerHTML = errorsHtml.join("");
+                );
+            }
+            errorsContainer.innerHTML = errorsHtml.join("");
         } else {
-          alert(
-            "Something went wrong. Please check your internet connection and try again!"
-          );
+            alert(
+                "Something went wrong. Please check your internet connection and try again!"
+            );
         }
-      }
+    }
 });
 
 // DOMContentLoaded event listener makes fetch call to get bookings and display some form options
@@ -177,7 +177,23 @@ document.addEventListener("DOMContentLoaded", async () => {
             // }
 
             return `
-            <div class="past-booking-container past-booking${id}">
+            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title mdl-card--expand">
+                    <img class="current-bookings__picture" class="current-booking-image" src="${imgPath[0]}">
+                    <h2 class="mdl-card__title-text current-bookings__picture-text">${name}</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <div>${streetAddress} ${city}, ${state} </div>
+
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <div>${startMonth}/${startDay}/${startYear} to ${endMonth}/${endDay}/${endYear}</div>
+                    <div>${streetAddress} </div>
+                </div>
+            </div>
+            `;
+        });
+        /* <div class="past-booking-container past-booking${id}">
                 <div class="past-booking-image-container">
                     <img class="past-booking-image" src="${imgPath[0]}">
                 </div>
@@ -186,9 +202,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <div class="past-booking-kitchen-address"> ${streetAddress} ${city}, ${state} </div>
                     <div class="past-booking-date"> ${startMonth}/${startDay}/${startYear} to ${endMonth}/${endDay}/${endYear} </div>
                 </div>
-            </div>`;
-        });
-
+            </div> */
         // generates HTML for each current booking
         const currentBookHtml = currentBookings.map(({
             Kitchen: { name, imgPath, streetAddress, city: { cityName: city }, state: { stateName: state } },
@@ -213,21 +227,38 @@ document.addEventListener("DOMContentLoaded", async () => {
                 confirmation = "Cancelled!";
             }
 
+            // remember to add cancel button
             return `
-            <div class="current-booking-container current-booking${id}">
-                <div class="current-booking-image-container">
-                    <img class="current-booking-image" src="${imgPath[0]}">
+            <div class="demo-card-square-current mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title mdl-card--expand">
+                    <img class="current-bookings__picture" class="current-booking-image" src="${imgPath[0]}">
+                    <h2 class="mdl-card__title-text current-bookings__picture-text">${name}</h2>
                 </div>
-                <div class="current-booking-detail">
-                    <div class="current-booking-kitchen-name"> ${name} </div>
-                    <div class="current-booking-kitchen-address"> ${streetAddress} ${city}, ${state} </div>
-                    <div class="current-booking-date"> ${startMonth}/${startDay}/${startYear} to ${endMonth}/${endDay}/${endYear} </div>
-                    <div class="current-booking-confirmation"> ${confirmation} </div>
+                <div class="mdl-card__supporting-text">
+                    <div>${streetAddress} ${city}, ${state} </div>
+
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <div>${startMonth}/${startDay}/${startYear} to ${endMonth}/${endDay}/${endYear}</div>
+                    <div>${streetAddress} </div>
+                    <div>${confirmation}</div>
                     ${cancelButton}
                 </div>
-            </div>`;
+            </div>
+            `;
         });
-
+        // <div class="current-booking-container current-booking${id}">
+        //     <div class="current-booking-image-container">
+        //         <img class="current-booking-image" src="${imgPath[0]}">
+        //     </div>
+        //     <div class="current-booking-detail">
+        //         <div class="current-booking-kitchen-name"> ${name} </div>
+        //         <div class="current-booking-kitchen-address"> ${streetAddress} ${city}, ${state} </div>
+        //         <div class="current-booking-date"> ${startMonth}/${startDay}/${startYear} to ${endMonth}/${endDay}/${endYear} </div>
+        //         <div class="current-booking-confirmation"> ${confirmation} </div>
+        //         ${cancelButton}
+        //     </div>
+        // </div>
 
         // generates options for review-options
         const reviewOptionsHtml = pastBookings.map(({

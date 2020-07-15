@@ -1,3 +1,161 @@
+.checkout
+	display: flex
+	margin-top: 20px
+
+.checkout__header
+	font-size: 28px
+	margin-bottom: 20px
+
+.checkout__rare-find
+	border: 1px solid #f2f2f2
+	display: flex
+	margin-bottom: 20px
+	padding: 20px
+
+.checkout__left
+	display: flex
+	flex-direction: column
+	margin: auto auto
+	flex-basis: 40%
+
+.checkout__rare-find--bold
+	font-weight: bold
+
+.checkout_rare-find-text
+	padding-left: 5px
+
+.checkout_rare-find-icon-container
+	color: #8BD9D9
+
+.checkout__date
+	display: flex
+	margin-bottom: 20px
+
+.checkout__self-check-in-container
+	margin-bottom: 20px
+	display: flex
+
+.checkout__date-container
+	background-color: #8BD9D9
+	padding: 1rem
+	text-align: center
+	margin-right: 1.2rem
+
+.checkout__self-check-in-icon
+	color: #F9A602
+
+.checkout__self-check-in-text
+	color: black
+	padding-left: 10px
+
+
+.checkout__date-text-container
+	flex-direction: column
+	padding-right: 1.2rem
+
+.checkout__check-in-text
+	margin-bottom: 0
+	font-weight: 300
+	font-size: 14px
+
+.checkout__check-in-time
+	font-weight: 300
+	font-size: 16px
+	margin-top: .2rem
+
+
+.checkout__date-text-container
+	display: flex
+	justify-content: center
+	align-items: center
+
+.checkout__mindful
+	margin: 0 0 56px
+	padding: 14px 0 0
+	border-top: 1px solid #f2f2f2
+	width: 100%
+
+.checkout__mindful-header
+	font-size: 18px
+	font-weight: bold
+
+.checkout__mindful-row
+	display: flex
+	margin: 20px 0
+	display: flex
+
+.checkout__mindful__icon-container
+	font-size: 32px
+	color: red
+	flex-basis: 20%
+
+.checkout__mindful__text
+	flex-basis: 80%
+	margin-left: 5px
+
+.checkout__right
+	// display: flex
+	// flex-direction: column
+	flex-basis: 40%
+	margin: 0 auto
+	border: 1px solid #f2f2f2
+
+.checkout_kitchen
+	display: flex
+	// flex-direction: row
+
+.checkout__kitchen-text-container
+	display: flex
+	flex-direction: column
+
+.checkout__kitchen-text-container-wrapper
+	display: flex
+	margin-top: 20px
+	margin-left: 10px
+
+.checkout__rental-summary
+	display: flex
+	flex-direction: column
+	border-top: 1px solid #f2f2f2
+	margin: 10px 20px 
+
+.checkout__due
+	display: flex
+	flex-direction: column
+	border-top: 1px solid #f2f2f2
+	margin: 10px 20px 
+
+.checkout__rental-row
+	display: flex
+	justify-content: space-between
+	margin: 15px 5px 
+
+.checkout__summary
+	display: flex
+	margin-top: 20px
+
+.checkout__summary-icon
+	flex-basis: 10%
+	margin-left: 25px
+
+.checkout__summary-text
+	flex-basis: 90%
+
+.checkout__kitchen-name
+	font-weight: bold
+	font-size: 14px
+
+.checkout__kitchen-location
+	font-size: 12px
+
+.checkout__kitchen-reviews
+	font-size: 11px
+
+.star
+	color: #F9A602
+// .checkout__kitchen-img
+// 	margin-left: auto
+// 	justify-content: flex-end
 .navBar
 	color: $white
 	font-family: $mainFont
@@ -14,57 +172,57 @@
 	@include buttonStyle()
 	@include buttonShadow()
 
-//this styles the map
-.bookings-form__imgs img
-	// margin-top: 50px
-	// width: 350px
-	// height: 350px
-	// border-radius: 25px
+// //this styles the map
+// .bookings-form__imgs img
+// 	// margin-top: 50px
+// 	// width: 350px
+// 	// height: 350px
+// 	// border-radius: 25px
 
 
-.bookings-form__left
-	display: flex
-	flex-direction: column
-	padding: 20px
-	width: 70%
+// .bookings-form__left
+// 	display: flex
+// 	flex-direction: column
+// 	padding: 20px
+// 	width: 70%
 
-.bookings-form__left-top
-	display: flex
-	justify-content: center
+// .bookings-form__left-top
+// 	display: flex
+// 	justify-content: center
 
 
-.bookings-form__left-top__kitchen-location-container
-	display: flex
-	flex-direction: column
+// .bookings-form__left-top__kitchen-location-container
+// 	display: flex
+// 	flex-direction: column
 
-.bookings-form__left-top__kitchen-name
-	@include fontStyle()
-	font-size: 28px
+// .bookings-form__left-top__kitchen-name
+// 	@include fontStyle()
+// 	font-size: 28px
 
-.bookings-form__left-top-container
-	background-color: $white
-	display: flex
-	flex-direction: row
-	justify-content: flex-c
-	height: 130px
-	width: 600px
-	border: 1px solid $blue
-	border-radius: 15px
+// .bookings-form__left-top-container
+// 	background-color: $white
+// 	display: flex
+// 	flex-direction: row
+// 	justify-content: flex-c
+// 	height: 130px
+// 	width: 600px
+// 	border: 1px solid $blue
+// 	border-radius: 15px
 
-.bookings-form__left-top__kitchen-location
-	font-size: 20px
-	@include fontStyle()
+// .bookings-form__left-top__kitchen-location
+// 	font-size: 20px
+// 	@include fontStyle()
 
-.bookings-form__left-top__kitchen-feature-img img
+.checkout__kitchen-img img
 	width: 170px
 	height: 120px
 	padding: 10px
 
-.bookings-form__left-top__kitchen-star-rating
-	@include fontStyle()
-	@include star()
-	padding-left: 40px
-	padding-bottom: 20px
+// .bookings-form__left-top__kitchen-star-rating
+// 	@include fontStyle()
+// 	@include star()
+// 	padding-left: 40px
+// 	padding-bottom: 20px
 
 
 
@@ -72,178 +230,160 @@
 
 
 
-.bookings-form__left-bottom
-	display: flex
-	justify-content: space-around
-	padding-top: 50px
-	margin-right: 40px
+// .bookings-form__left-bottom
+// 	display: flex
+// 	justify-content: space-around
+// 	padding-top: 50px
+// 	margin-right: 40px
 
-.bookings-form__left-bottom__features
-	display: flex
-	flex-direction: column
-	height: 580px
+// .bookings-form__left-bottom__features
+// 	display: flex
+// 	flex-direction: column
+// 	height: 580px
 
-.bookings-form__left-bottom__features-header
-	@include fontStyle()
-	font-weight: bold
-	font-size: 30px
-	display: flex
-	justify-content: center
-	// padding: 20px
+// .bookings-form__left-bottom__features-header
+// 	@include fontStyle()
+// 	font-weight: bold
+// 	font-size: 30px
+// 	display: flex
+// 	justify-content: center
+// 	// padding: 20px
 
-.bookings-form__left-bottom__features-body
-	align-content: center
-	// width: 120%
-	// height: 80%
+// .bookings-form__left-bottom__features-body
+// 	align-content: center
+// 	// width: 120%
+// 	// height: 80%
 
-.bookings-form__left-bottom__features-image
-	display: flex
-	justify-content: space-between
-	height: 40%
-	padding: 5px 10px 0px 10px
-
-
-.bookings-form__left-bottom__features-image img
-	width: 75px
-	height: 75px
-	object-fit: fit
-
-.bookings-form__left-bottom__calendar
-	@include fontStyle()
-	display: flex
-
-th, td,
-	background-color: $blue
-	font-size: 16px
-	@include buttonStyle()
-	@include fontStyle()
-	@include buttonShadow
-
-#monthAndYear
-	padding: 10px
+// .bookings-form__left-bottom__features-image
+// 	display: flex
+// 	justify-content: space-between
+// 	height: 40%
+// 	padding: 5px 10px 0px 10px
 
 
-.card
-	border: 1px solid $blue
-	// padding-top: 20px
-	outline: none
+// .bookings-form__left-bottom__features-image img
+// 	width: 75px
+// 	height: 75px
+// 	object-fit: fit
 
-.bookings-form__calendar-pn
-	display: flex
-	justify-content: space-around
-	color: $blue
-	@include fontStyle()
+// .bookings-form__left-bottom__calendar
+// 	@include fontStyle()
+// 	display: flex
 
-#previous, #next, #confirmTime
-	// background-color: $blue
-	// font-size: 16px
-	@include buttonStyleBlue()
-	// @include fontStyle()
-	// @include buttonShadow
-
-
-//this is what was changing the size when a date was clicked
-.bookings__start-end-time-container
-	display: flex
-	flex-direction: row
-
-.form-inline
-	display: flex
-	flex-direction: column
-
-#month, #year, #startTime, #endTime
-	color: $blue
-
-.start-time, .end-time
-	width: 50%
-	padding: 5px 0px 0px 0px
-
-.jump-to
-	display: flex
-	width: 100%
-	justify-content: space-between
-
-.booking-details__set-time
-	// display: flex
-	width: 100%
-
-.start-time, .end-time
-	display: flex
-
-
-.bookings-form__left-bottom__features-name
-	@include fontStyle()
-	font-size: 20px
-	// padding: 10px
-	font-weight: bold
-	padding-top: 40px
-	// border-top: 1px solid $blue
-
-
-
-
-
-
-
-.calendar-button-class
-	@include buttonStyle()
-
-.hidden
-	position: absolute
-	display: none
-
-form
-	display: flex
-	align-content: center
-	flex-direction: column
-	justify-content: center
-	// position: relative
-	text-align: center
-	// height: 50vh
-	// width: 30vw
-	// margin: 30px 15px
-	border-radius: 15px
-	// min-height: 400px
-
-.bookings-form
-	display: flex
-	width: 100vw
-	justify-content: space-around
-
-
-
-
-
-.bookings-form__right-top
-	display: flex
-	justify-content: flex-end
-	padding: 20px 15px
-
-#bookings-form-check-availability
-	@include buttonStyleBlue()
-	@include buttonShadow()
-
-#bookings-form__right-bottom-submit, #month, #year, #startTime, #endTime
-	// background-color: $blue
-	// font-size: 16px
-	// @include buttonStyle()
-	// @include fontStyle()
-	// @include buttonShadow
-	// text-decoration: underline $blue
-
-
-
-
-
-
-
-// .form-control
+// th, td,
 // 	background-color: $blue
 // 	font-size: 16px
 // 	@include buttonStyle()
 // 	@include fontStyle()
 // 	@include buttonShadow
 
+// // #monthAndYear
+// // 	padding: 10px
+
+// .calendar-card
+// 	display: flex
+// 	flex-direction: column
+
+// #calendar-body
+// 	table-layout: fixed
+
+// .card
+// 	border: 1px solid $blue
+// 	// padding-top: 20px
+// 	outline: none
+
+// .bookings-form__calendar-pn
+// 	display: flex
+// 	justify-content: space-around
+// 	color: $blue
+// 	@include fontStyle()
+
+// #previous, #next, #confirmTime
+// 	// background-color: $blue
+// 	// font-size: 16px
+// 	@include buttonStyleBlue()
+// 	// @include fontStyle()
+// 	// @include buttonShadow
+
+
+// //this is what was changing the size when a date was clicked
+// .bookings__start-end-time-container
+// 	display: flex
+// 	flex-direction: row
+
+// .form-inline
+// 	display: flex
+// 	flex-direction: column
+
+// #month, #year, #startTime, #endTime
+// 	color: $blue
+
+// .start-time, .end-time
+// 	width: 50%
+// 	padding: 5px 0px 0px 0px
+
+// .jump-to
+// 	display: flex
+// 	width: 100%
+// 	justify-content: space-between
+
+// .booking-details__set-time
+// 	// display: flex
+// 	width: 100%
+
+// .start-time, .end-time
+// 	display: flex
+
+
+// .bookings-form__left-bottom__features-name
+// 	@include fontStyle()
+// 	font-size: 20px
+// 	// padding: 10px
+// 	font-weight: bold
+// 	padding-top: 40px
+// 	// border-top: 1px solid $blue
+
+// .calendar-button-class
+// 	@include buttonStyle()
+
+// .hidden
+// 	position: absolute
+// 	display: none
+
+// form
+// 	display: flex
+// 	align-content: center
+// 	flex-direction: column
+// 	justify-content: center
+// 	// position: relative
+// 	text-align: center
+// 	// height: 50vh
+// 	// width: 30vw
+// 	// margin: 30px 15px
+// 	border-radius: 15px
+// 	// min-height: 400px
+
+// .bookings-form
+// 	display: flex
+// 	width: 100vw
+// 	justify-content: space-around
+
+// .bookings-form__right-top
+// 	display: flex
+// 	justify-content: flex-end
+// 	padding: 20px 15px
+
+// #bookings-form-check-availability
+// 	@include buttonStyleBlue()
+// 	@include buttonShadow()
+
+// #bookings-form__right-bottom-submit, #month, #year, #startTime, #endTime
+// 	// background-color: $blue
+// 	// font-size: 16px
+// 	// @include buttonStyle()
+// 	// @include fontStyle()
+// 	// @include buttonShadow
+// 	// text-decoration: underline $blue
 
 
 
@@ -251,35 +391,44 @@ form
 
 
 
+// // .form-control
+// // 	background-color: $blue
+// // 	font-size: 16px
+// // 	@include buttonStyle()
+// // 	@include fontStyle()
+// // 	@include buttonShadow
 
-
-
-
-
-.bookings-form__right-bottom-checkout-total
-	@include fontStyleBold()
-	padding: 20px
-
-.bookings-form__right-bottom-checkout-total-container > div
-	// border-bottom: 1px solid #f6f6f6
-
-.bookings-form__right-bottom-checkout-due-now
-	display: flex
-	flex-direction: space-between
-
-// .bookings-form__right-bottom-checkout-total-container > div
+// .bookings-form__right-bottom-checkout-total
+// 	@include fontStyleBold()
 // 	padding: 20px
 
-.checkout_text
-	// @include fontStyle()
-	// font-weight: bold
-	// font-size: 16px
+// .bookings-form__right-bottom-checkout-total-container > div
+// 	// border-bottom: 1px solid #f6f6f6
+
+// .bookings-form__right-bottom-checkout-due-now
+// 	display: flex
+// 	flex-direction: space-between
+
+// // .bookings-form__right-bottom-checkout-total-container > div
+// // 	padding: 20px
+
+// .checkout_text
+// 	// @include fontStyle()
+// 	// font-weight: bold
+// 	// font-size: 16px
 
 
 
-span
-	font-weight: bold
+// span
+// 	font-weight: bold
 
 
-.errors-container
-	@include fontStyleError()
+// .errors-container
+// 	@include fontStyleError()
+
+
+// .checkout-table
+// 	width: 500px
+// 	height: 600px
+// 	margin: 5px
+// 	table-layout: auto

@@ -2,11 +2,13 @@ import { logOut, isLoggedIn, createListing, goToDashboard } from "./tools.js";
 import { api } from "./getapi.js";
 const userId = localStorage.getItem("AIRCNC_CURRENT_USER_ID");
 const reviewSelector = document.getElementById("reviewSelector");
+const bookingsContainer = document.querySelector(".bookings-container")
 const pastBookingsContainer = document.querySelector(".pastBookings");
 const currentBookingsContainer = document.querySelector(".currentBookings");
 const kitchensContainer = document.querySelector(".kitchens-container");
 const welcomeTextDiv = document.querySelector(".welcome-text");
 const guestReview = document.querySelector(".guest-review-form");
+const reviewSection = document.querySelector(".guest-review")
 
 // redirects users to /profile if they are a guest
 if (localStorage.getItem("AIRCNC_CURRENT_USER_ROLE") === 2) {
@@ -144,10 +146,27 @@ document.addEventListener("DOMContentLoaded", async () => {
         const { kitchens: hostKitchens } = await res.json();
         const { hostBookings } = await resII.json();
 
+
         // generate welcome text
-        const { user } = hostKitchens[0];
-        const { firstName, lastName } = user;
-        const welcomeHtml = `${firstName} ${lastName}'s Kitchens and Bookings`
+        let welcomeHtml = ''
+        let user = ''
+        let firstName = ''
+        let lastName = ''
+        // const { user } = hostKitchens[0];
+        // const { firstName, lastName } = user;
+
+        if (hostKitchens.length === 0) {
+            welcomeHtml = "<a class='button' href='/listings/create'>Click here to list your first Kitchen!</a>"
+            reviewSection.classList.add('hidden')
+            bookingsContainer.classList.add('hidden')
+        } else {
+            const { user: resUser } = hostKitchens[0];
+            user = resUser;
+            const { firstName: resFirstName, lastName: resLastName } = resUser;
+            firstName = resFirstName;
+            lastName = resLastName;
+            welcomeHtml = `${firstName} ${lastName}'s Kitchens and Bookings`
+        }
 
         // generate kitchen details
         const kitchenDetailHtml = hostKitchens.map(({

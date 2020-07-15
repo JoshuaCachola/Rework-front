@@ -100,6 +100,7 @@ body {
   font-weight: 300;
   font-size: 25px;
   text-decoration: underline;
+  padding: 20px;
 }
 
 .kitchen-detail-container {
@@ -383,7 +384,7 @@ h3, .current-booking-header {
       align-self: center;
 }
 
-button {
+button, .button {
   text-align: center;
   font-size: 19px;
   font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -401,7 +402,7 @@ button {
   font-weight: 400;
 }
 
-button:hover {
+button:hover, .button:hover {
   color: #8BD9D9;
   font-size: 20px;
   font-weight: bold;

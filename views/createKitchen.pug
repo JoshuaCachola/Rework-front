@@ -8,13 +8,64 @@ html(lang="en")
         link(rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png")
         link(rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png")
         link(rel="manifest" href="/images/favicon/site.webmanifest")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css")
+        script(defer src="https://code.getmdl.io/1.3.0/material.min.js")
         link(rel="api" href=`${api}`)
         style
             include ../public/stylesheets/createKitchenStyles/styles/style.css
         title AirCnC - Create a Kitchen
     body
         include includes/host-navbar.pug
-        div.errors-container
+        .errors-container
+        
+        .create-listing__container
+            .mld-card.mdl-shadow--2dp
+                .mdl-card__title
+                    h2.mdl-card__title-text Kitchen Description
+                .mdl-card__supporting-text
+                    form(action="" id='kitchen-form')
+                        .kitchen-form__name-input
+                            label.kitchen-form__label(for="name") Name
+                            input.kitchen-form__text-input(type = 'text', name='name')
+                        .kitchen-form__state-input
+                            label.kitchen-form__label(for="state") Select State
+                            select(name="state", id='states')
+                        .kitchen-form__city-input
+                            label.kitchen-form__label(for="city") Select City
+                            select(name="city", id='cities')
+                        .kitchen-form__address-input
+                            label.kitchen-form__label(for="address") Address
+                            input.kitchen-form__text-input(type = 'text', name='address')
+                        .kitchen-form__rate-input
+                            label.kitchen-form__label(for="rate") Rate
+                            input.kitchen-form__text-input(type="number", name='rate')
+                        .kitchen-form__description-input
+                            label(for="description", class="description__text") Description
+                            textarea(name="description", type="text", class="description__text-area")
+                        .kitchen-form__img-text
+                            label(for="file", class="imgFile") Upload Image
+                        .kitchen-form__img-input
+                            input(type='file', name='file' multiple, class="imgButton" id='img-upload')
+                        //- add drag and drop here
+                .mld-card__actions.mdl-card--border
+                    
+
+            table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp
+                thead
+                    tr
+                        th Feature
+                        th 
+                        th Included
+                tbody.features__table
+
+        .kitchen-form__bottom
+                    button(type='submit' id="create-kitchen-button") Create Kitchen
+
+
+
+
+
         div.kitchen-form
             form(action="" id='kitchen-form')
                 div.kitchen-form__top
@@ -48,5 +99,4 @@ html(lang="en")
                     div(id='features' class='features')
                         div.features__left(id='features__left')
                         div.features__right(id='features__right')
-                div.kitchen-form__bottom
-                    button(type='submit' id="create-kitchen-button") Create Kitchen
+                
