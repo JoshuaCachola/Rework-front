@@ -223,8 +223,45 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (isConfirmed) {
                 confirmation = "Confirmed!";
                 cancelButton = `<button class="cancel-booking-button" value="bookings/${id}">Cancel</button>`;
+                return `
+                        <div class="demo-card-square-current__cancel mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand">
+                                <img class="current-bookings__picture" class="current-booking-image" src="${imgPath[0]}">
+                                <h2 class="mdl-card__title-text current-bookings__picture-text">${name}</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                <div>${streetAddress} ${city}, ${state} </div>
+
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <div>${startMonth}/${startDay}/${startYear} to ${endMonth}/${endDay}/${endYear}</div>
+                                <div>${streetAddress} </div>
+                                <div>${confirmation}</div>
+                                <div class='profile-cancel__button'>${cancelButton}</div>
+
+                            </div>
+                        </div>
+                        `;
             } else {
                 confirmation = "Cancelled!";
+                return `
+                        <div class="demo-card-square-current mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand">
+                                <img class="current-bookings__picture" class="current-booking-image" src="${imgPath[0]}">
+                                <h2 class="mdl-card__title-text current-bookings__picture-text">${name}</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                <div>${streetAddress} ${city}, ${state} </div>
+
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <div>${startMonth}/${startDay}/${startYear} to ${endMonth}/${endDay}/${endYear}</div>
+                                <div>${streetAddress} </div>
+                                <div>${confirmation}</div>
+                                ${cancelButton}
+                            </div>
+                        </div>
+                        `;
             }
 
             // remember to add cancel button
