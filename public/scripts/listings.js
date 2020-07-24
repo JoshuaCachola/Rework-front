@@ -32,18 +32,27 @@ function initMap(latLngRate) {
         const infoWindowNode = document.createElement('div');
         const reviewCount = obj.kitchenReview.length
         infoWindowNode.innerHTML = `
-      <div class="info-window">
+        <div class="info-window">
         <div class="info-window__picture-container">
           <div class="infow-window__name">
             ${obj.name}
           </div>
           <img class="info-window__picture" src=${obj.imgPath[0]} />
-
         </div>
         <div class="info-window__reviews">
           <img class="info-window__reviews-icon" src="https://img.icons8.com/fluent/48/000000/star.png"/> ${reviewCount} reviews
         </div>
-        
+        <div class="info-window__features">
+          <div>
+            ${obj.kitchenFeature[0].feature.feature} •&nbsp
+          </div>
+          <div>
+            ${obj.kitchenFeature[1].feature.feature} •&nbsp
+          </div>
+          <div>
+            ${obj.kitchenFeature[2].feature.feature}
+          </div>
+        </div>
         <div class="info-window__rate">
           <span><b>$${rate}</b> / hour</span>
         </div>
@@ -57,16 +66,16 @@ function initMap(latLngRate) {
 }
 
 // <div class="info-window__features">
-        //   <div>
-        //     ${obj.kitchenFeature[0].feature.feature} •&nbsp
-        //   </div>
-        //   <div>
-        //     ${obj.kitchenFeature[1].feature.feature} •&nbsp
-        //   </div>
-        //   <div>
-        //     ${obj.kitchenFeature[2].feature.feature}
-        //   </div>
-        // </div>
+//   <div>
+//     ${obj.kitchenFeature[0].feature.feature} •&nbsp
+//   </div>
+//   <div>
+//     ${obj.kitchenFeature[1].feature.feature} •&nbsp
+//   </div>
+//   <div>
+//     ${obj.kitchenFeature[2].feature.feature}
+//   </div>
+// </div>
 const getListings = async (search) => {
   try {
     // const userId = localStorage.getItem("AIRCNC_USER_ID");
