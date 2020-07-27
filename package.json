@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/JoshuaCachola/Rework-front#readme",
   "dependencies": {
+    "@splidejs/splide": "^2.4.6",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "latte-carousel": "^1.6.1",

@@ -13,7 +13,7 @@ html(lang="en")
             include ../public/stylesheets/mainListingsStyle/styles/style.css
         title AirCnC - Kitchen Details
     body
-        div.navListings
+        .navListings
             form(action="/listings" method="get")
                 img(class="logo" src="/images/logo/aircnc-navbar-white.png")
                 input(id="searchInput" type="search" class="searchBar" name="search" placeholder='Try "Los Angeles"')
@@ -24,6 +24,7 @@ html(lang="en")
                 button(class="logoutButton" id='logout-button' href="http://log-out") Log out
         .mapContainer
             #mapAndListings
+                //- .listings__header
                 #kitchenListings
                 .map-container
                     #map
