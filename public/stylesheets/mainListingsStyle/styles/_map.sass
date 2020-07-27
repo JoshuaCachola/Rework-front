@@ -15,6 +15,7 @@ body
 
 #kitchenListings
   display: flex
+  min-width: 660px
   width: 50%
   // align-content: center
   flex-direction: column
@@ -52,3 +53,14 @@ body
   // position: absolute
   width: 50%
   // right: 0
+
+
+@media only screen and (max-width: 950px)
+  #kitchenListings
+    width: 100%
+
+  #map
+    display: none
+
+  .map-container
+    width: 0%
