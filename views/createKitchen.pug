@@ -1,8 +1,13 @@
 doctype html
-html(lang="en")
+html(lang="en" prefix="og: http://ogp.me/ns#")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        meta(property='og:title' content='Air CnC')
+        meta(property='og:image' content='images/rsz_aircnc-pic.png')
+        meta(property='og:description' content='A site to rent brilliant kitchens')
+        meta(property='og:url' content='http://www.aircnc.us/')
         script(type="module" src="/scripts/create-kitchen.js")
         link(rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png")
         link(rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png")
@@ -18,7 +23,7 @@ html(lang="en")
     body
         include includes/host-navbar.pug
         .errors-container
-        
+
         .create-listing__container
             .mld-card.mdl-shadow--2dp
                 .mdl-card__title
@@ -49,13 +54,13 @@ html(lang="en")
                             input(type='file', name='file' multiple, class="imgButton" id='img-upload')
                         //- add drag and drop here
                 .mld-card__actions.mdl-card--border
-                    
+
 
             table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp
                 thead
                     tr
                         th Feature
-                        th 
+                        th
                         th Included
                 tbody.features__table
 
