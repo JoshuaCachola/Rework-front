@@ -23,6 +23,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-height: 100vh;
+  overflow-y: scroll;
   min-width: 660px;
   width: 50%;
   -webkit-box-orient: vertical;
@@ -32,7 +34,7 @@ body {
 }
 
 #map {
-  height: 770px;
+  height: 100vh;
   width: 100%;
   overflow: none;
   position: fixed;

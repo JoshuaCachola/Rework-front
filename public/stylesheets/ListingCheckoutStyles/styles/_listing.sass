@@ -48,7 +48,6 @@
 	color: black
 	padding-left: 10px
 
-
 .checkout__date-text-container
 	flex-direction: column
 	padding-right: 1.2rem
@@ -62,7 +61,6 @@
 	font-weight: 300
 	font-size: 16px
 	margin-top: .2rem
-
 
 .checkout__date-text-container
 	display: flex
@@ -117,18 +115,18 @@
 	display: flex
 	flex-direction: column
 	border-top: 1px solid #f2f2f2
-	margin: 10px 20px 
+	margin: 10px 20px
 
 .checkout__due
 	display: flex
 	flex-direction: column
 	border-top: 1px solid #f2f2f2
-	margin: 10px 20px 
+	margin: 10px 20px
 
 .checkout__rental-row
 	display: flex
 	justify-content: space-between
-	margin: 15px 5px 
+	margin: 15px 5px
 
 .checkout__summary
 	display: flex
@@ -172,13 +170,20 @@
 	@include buttonStyle()
 	@include buttonShadow()
 
+.checkout__submit-booking
+	@include buttonStyleBlue()
+	@include buttonShadow()
+
+.checkout__button
+	display: flex
+	justify-content: center
+	margin-top: 30px
 // //this styles the map
 // .bookings-form__imgs img
 // 	// margin-top: 50px
 // 	// width: 350px
 // 	// height: 350px
 // 	// border-radius: 25px
-
 
 // .bookings-form__left
 // 	display: flex
@@ -189,7 +194,6 @@
 // .bookings-form__left-top
 // 	display: flex
 // 	justify-content: center
-
 
 // .bookings-form__left-top__kitchen-location-container
 // 	display: flex
@@ -224,12 +228,6 @@
 // 	padding-left: 40px
 // 	padding-bottom: 20px
 
-
-
-
-
-
-
 // .bookings-form__left-bottom
 // 	display: flex
 // 	justify-content: space-around
@@ -259,7 +257,6 @@
 // 	justify-content: space-between
 // 	height: 40%
 // 	padding: 5px 10px 0px 10px
-
 
 // .bookings-form__left-bottom__features-image img
 // 	width: 75px
@@ -305,7 +302,6 @@
 // 	// @include fontStyle()
 // 	// @include buttonShadow
 
-
 // //this is what was changing the size when a date was clicked
 // .bookings__start-end-time-container
 // 	display: flex
@@ -333,7 +329,6 @@
 
 // .start-time, .end-time
 // 	display: flex
-
 
 // .bookings-form__left-bottom__features-name
 // 	@include fontStyle()
@@ -385,12 +380,6 @@
 // 	// @include buttonShadow
 // 	// text-decoration: underline $blue
 
-
-
-
-
-
-
 // // .form-control
 // // 	background-color: $blue
 // // 	font-size: 16px
@@ -417,15 +406,11 @@
 // 	// font-weight: bold
 // 	// font-size: 16px
 
-
-
 // span
 // 	font-weight: bold
 
-
 // .errors-container
 // 	@include fontStyleError()
-
 
 // .checkout-table
 // 	width: 500px

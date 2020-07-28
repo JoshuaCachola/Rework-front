@@ -24,7 +24,7 @@ html(lang="en" prefix="og: http://ogp.me/ns#")
         .navBar
             .navImage
                 img(class="logo" src="/images/logo/aircnc-navbar-white.png")
-            div.navButtons
+            .navButtons
                 button(id="profile-button" class="profile") Profile
                 button(id="listings-button" class="listingsButton" href="/kitchens") Listings
                 button(id="logout-button" class="logoutButton" href="/") Log out
@@ -84,9 +84,6 @@ html(lang="en" prefix="og: http://ogp.me/ns#")
                             i(class="fas fa-paw")
                         .checkout__mindful__text No pets
 
-                .checkout__submit-booking
-                    button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored Agree and book
-
             .checkout__right
                 .checkout__kitchen-description
 
@@ -121,3 +118,6 @@ html(lang="en" prefix="og: http://ogp.me/ns#")
                     .checkout__rental-row
                         div Due now
                         div $0.00
+
+                .checkout__button
+                    button.checkout__submit-booking.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored Agree and book
