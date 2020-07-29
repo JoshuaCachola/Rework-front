@@ -9,7 +9,7 @@ RUN npm ci
 COPY . .
 
 ENV NODE_ENV=production
-ENV PROD_API=https://aircnc-back-api.herokuapp.com/
+ENV PROD_API=https://aircnc-backend-api-prod.herokuapp.com/
 
 EXPOSE 4000
 CMD ["npm", "run", "start:production"]
